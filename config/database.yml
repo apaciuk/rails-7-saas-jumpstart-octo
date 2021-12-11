@@ -25,17 +25,7 @@ default: &default
 
 development:
   <<: *default
-  database: lurve_tracker_development
-
-  # The specified database role being used to connect to postgres.
-  # To create additional roles in postgres see `$ createuser --help`.
-  # When left blank, postgres will use the default role. This is
-  # the same name as the operating system user running Rails.
-  #username: lurve_tracker
-
-  # The password associated with the postgres role (username).
-  #password:
-
+  database: jumpstart_development
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
   # domain sockets, so uncomment these lines.
@@ -59,7 +49,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: lurve_tracker_test
+  database: jumpstart_test
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -83,6 +73,6 @@ test:
 #
 production:
   <<: *default
-  database: lurve_tracker_production
-  username: lurve_tracker
+  database: jumpstart_production
+  username: anton
   password: <%= ENV["LURVE_TRACKER_DATABASE_PASSWORD"] %>

@@ -28,6 +28,7 @@ Rails 7.0.0 up
 4. $ rails db:create
 5. $ rails db:migrate
 6. Is set up to send user signup mail with gmail, alter smtp or other mail credentials (.env, application_mailer, devise.rb & development.rb), then test signup confirmation emails by signing up & confirming user email
+copy .env.example > .env and enter details
 7. $ rails stimulus_reflex:install
 8. $ rails dev:cache (check, should be cached, if not run again)
 9. $ rails g madmin:install  (if not, have to alter nav)
