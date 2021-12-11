@@ -153,6 +153,7 @@ GEM
       ruby-vips (>= 2.0.17, < 3)
     jbuilder (2.11.3)
       activesupport (>= 5.0.0)
+    json (2.6.1)
     jwt (2.3.0)
     listen (3.7.0)
       rb-fsevent (~> 0.10, >= 0.10.3)
@@ -248,6 +249,10 @@ GEM
       nokogiri (>= 1.6)
     rails-html-sanitizer (1.4.2)
       loofah (~> 2.3)
+    rails_real_favicon (0.1.1)
+      json (>= 1.7, < 3)
+      rails
+      rubyzip (~> 2)
     railties (7.0.0.rc1)
       actionpack (= 7.0.0.rc1)
       activesupport (= 7.0.0.rc1)
@@ -266,6 +271,7 @@ GEM
     ruby-vips (2.1.4)
       ffi (~> 1.12)
     ruby2_keywords (0.0.5)
+    rubyzip (2.3.2)
     sass-rails (6.0.0)
       sassc-rails (~> 2.1, >= 2.1.1)
     sassc (2.4.0)
@@ -357,6 +363,7 @@ DEPENDENCIES
   pundit (~> 2.1)
   rack-mini-profiler (~> 2.0)
   rails (~> 7.0.0.alpha2)
+  rails_real_favicon (~> 0.1.1)
   redis
   sass-rails
   sidekiq (~> 6.2)

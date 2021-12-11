@@ -59,3 +59,5 @@ gem 'sitemap_generator', '~> 6.1'
 gem 'whenever', require: false
 
 gem "dotenv-rails", "~> 2.7"
+
+gem "rails_real_favicon", "~> 0.1.1"
