@@ -1,0 +1,76 @@
+@import "font-awesome-sprockets";
+@import "font-awesome";
+@import "bootstrap";
+
+// Fixes bootstrap nav-brand container overlap
+@include media-breakpoint-down(xs) {
+  .container {
+    margin-left: 0;
+    margin-right: 0;
+  }
+}
+// Masquerade alert shouldn't have a bottom margin
+body > .alert {
+  margin-bottom: 0;
+}
+// Announcements
+.announcement {
+  strong {
+    color: $gray-700;
+    font-weight: 900;
+  }
+}
+
+.section-front {
+  margin-bottom:30px;
+  border: solid 2px #e8e8e8;
+
+}
+body > main > div > section > div.container > div > div:nth-child(3) > div > div.card-action > button > a,
+body > main > div > section > div.container > div > div:nth-child(2) > div > div.card-action > button > a {
+  color:white;
+}
+.unread-announcements:before {
+  -moz-border-radius: 50%;
+  -webkit-border-radius: 50%;
+  border-radius: 50%;
+  -moz-background-clip: padding-box;
+  -webkit-background-clip: padding-box;
+  background-clip: padding-box;
+  background: $red;
+  content: '';
+  display: inline-block;
+  height: 8px;
+  width: 8px;
+  margin-right: 6px;
+}
+.jumbotron {
+  background:#f5f2f2;
+  padding: 20px;
+}
+#slides {
+  position: relative;
+  height: 400px;
+  padding: 0px;
+  margin: 0px;
+  list-style-type: none;
+}
+.slide {
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 100%;
+  height: 100%;
+
+  font-size: 40px;
+  //padding: 40px;
+  box-sizing: border-box;
+  background: #333;
+  color: #fff;
+  transition: opacity 1s;
+}
+.showing {
+  opacity: 1;
+  z-index: 2;
+}
+
