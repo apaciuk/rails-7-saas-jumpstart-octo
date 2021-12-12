@@ -74,3 +74,5 @@ gem 'whenever', require: false
 gem 'dotenv-rails', '~> 2.7'
 # Favicon
 gem 'rails_real_favicon', '~> 0.1.1'
+
+gem "git-up", "~> 0.5.12"
