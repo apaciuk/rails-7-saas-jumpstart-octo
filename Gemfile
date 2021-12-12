@@ -26,7 +26,7 @@ gem 'view_component'
 
 
 group :development do
-  # Code style cchecking
+  # Code style checking
   gem "rubocop", "~> 1.23"
   gem "rubocop-rails", "~> 2.12"
  # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
