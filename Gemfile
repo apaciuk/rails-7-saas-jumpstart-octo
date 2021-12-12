@@ -26,6 +26,9 @@ gem 'view_component'
 
 
 group :development do
+  # Code style cchecking
+  gem "rubocop", "~> 1.23"
+  gem "rubocop-rails", "~> 2.12"
  # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
   gem 'web-console', '>= 4.1.0'
   # Display performance information such as SQL time and flame graphs for each request in your browser.
@@ -70,3 +73,7 @@ gem 'whenever', require: false
 gem "dotenv-rails", "~> 2.7"
 # Favicon
 gem "rails_real_favicon", "~> 0.1.1"
+
+
+
+
