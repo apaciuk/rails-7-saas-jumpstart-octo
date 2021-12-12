@@ -35,6 +35,7 @@ copy .env.example > .env and enter details, or adapt to suit yours.
 10. $ rails g madmin:views  (overwrite)
 11. $ rails generate favicon  (put your favicon.png in assets/images, along with favicon.json in config folder)
     (see https://realfavicongenerator.net/)  for more info.
+12. $ rails g rspec:install  (for testing)
 
 * Woot woot  Start server!
 (optional: bundle add foreman && foreman start)
