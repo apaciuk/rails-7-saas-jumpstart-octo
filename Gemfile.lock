@@ -74,6 +74,8 @@ GEM
       tzinfo (~> 2.0)
     addressable (2.8.0)
       public_suffix (>= 2.0.2, < 5.0)
+    archive-zip (0.12.0)
+      io-like (~> 0.3.0)
     ast (2.4.2)
     autoprefixer-rails (10.3.3.0)
       execjs (~> 2)
@@ -89,6 +91,19 @@ GEM
     cable_ready (4.5.0)
       rails (>= 5.2)
       thread-local (>= 1.1.0)
+    capybara (3.36.0)
+      addressable
+      matrix
+      mini_mime (>= 0.1.3)
+      nokogiri (~> 1.8)
+      rack (>= 1.6.0)
+      rack-test (>= 0.6.3)
+      regexp_parser (>= 1.5, < 3.0)
+      xpath (~> 3.2)
+    childprocess (4.1.0)
+    chromedriver-helper (2.1.1)
+      archive-zip (~> 0.10)
+      nokogiri (~> 1.8)
     chronic (0.10.2)
     colored (1.2)
     concurrent-ruby (1.1.9)
@@ -161,6 +176,7 @@ GEM
     image_processing (1.12.1)
       mini_magick (>= 4.9.5, < 5)
       ruby-vips (>= 2.0.17, < 3)
+    io-like (0.3.1)
     jbuilder (2.11.3)
       activesupport (>= 5.0.0)
     json (2.6.1)
@@ -180,6 +196,7 @@ GEM
     mail (2.7.1)
       mini_mime (>= 0.1.1)
     marcel (1.0.2)
+    matrix (0.4.2)
     method_source (1.0.0)
     mime-types (1.25.1)
     mini_magick (4.11.0)
@@ -286,6 +303,23 @@ GEM
       actionpack (>= 5.0)
       railties (>= 5.0)
     rexml (3.2.5)
+    rspec-core (3.10.1)
+      rspec-support (~> 3.10.0)
+    rspec-expectations (3.10.1)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.10.0)
+    rspec-mocks (3.10.2)
+      diff-lcs (>= 1.2.0, < 2.0)
+      rspec-support (~> 3.10.0)
+    rspec-rails (5.0.2)
+      actionpack (>= 5.2)
+      activesupport (>= 5.2)
+      railties (>= 5.2)
+      rspec-core (~> 3.10)
+      rspec-expectations (~> 3.10)
+      rspec-mocks (~> 3.10)
+      rspec-support (~> 3.10)
+    rspec-support (3.10.3)
     rubocop (1.23.0)
       parallel (~> 1.10)
       parser (>= 3.0.0.0)
@@ -295,7 +329,7 @@ GEM
       rubocop-ast (>= 1.12.0, < 2.0)
       ruby-progressbar (~> 1.7)
       unicode-display_width (>= 1.4.0, < 3.0)
-    rubocop-ast (1.14.0)
+    rubocop-ast (1.15.0)
       parser (>= 3.0.1.1)
     rubocop-rails (2.12.4)
       activesupport (>= 4.2.0)
@@ -316,6 +350,10 @@ GEM
       sprockets (> 3.0)
       sprockets-rails
       tilt
+    selenium-webdriver (4.1.0)
+      childprocess (>= 0.5, < 5.0)
+      rexml (~> 3.2, >= 3.2.5)
+      rubyzip (>= 1.2.2)
     semantic_range (3.0.0)
     sidekiq (6.3.1)
       connection_pool (>= 2.2.2)
@@ -359,6 +397,10 @@ GEM
       activemodel (>= 6.0.0)
       bindex (>= 0.4.0)
       railties (>= 6.0.0)
+    webdrivers (5.0.0)
+      nokogiri (~> 1.6)
+      rubyzip (>= 1.3.0)
+      selenium-webdriver (~> 4.0)
     webpacker (5.4.3)
       activesupport (>= 5.2)
       rack-proxy (>= 0.6.1)
@@ -369,6 +411,8 @@ GEM
     websocket-extensions (0.1.5)
     whenever (1.0.0)
       chronic (>= 0.6.3)
+    xpath (3.2.0)
+      nokogiri (~> 1.8)
     zeitwerk (2.5.1)
 
 PLATFORMS
@@ -378,6 +422,8 @@ DEPENDENCIES
   bootsnap (>= 1.4.4)
   bootstrap (= 5.1.3)
   cable_ready
+  capybara
+  chromedriver-helper
   devise!
   devise_masquerade (~> 1.3)
   dotenv-rails (~> 2.7)
@@ -401,6 +447,7 @@ DEPENDENCIES
   rails (~> 7.0.0.alpha2)
   rails_real_favicon (~> 0.1.1)
   redis
+  rspec-rails (~> 5.0)
   rubocop (~> 1.23)
   rubocop-rails (~> 2.12)
   sass-rails
@@ -410,6 +457,7 @@ DEPENDENCIES
   turbo-rails
   view_component
   web-console (>= 4.1.0)
+  webdrivers
   webpacker
   whenever
 

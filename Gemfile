@@ -25,6 +25,16 @@ gem 'redis'
 gem 'bootsnap', '>= 1.4.4', require: false
 #  test components
 gem 'view_component'
+# Rspec testing
+group :development, :test do
+gem 'rspec-rails', '~> 5.0'
+end
+
+group :test do
+gem 'capybara'
+gem 'webdrivers'
+gem 'chromedriver-helper'
+end
 
 group :development do
   # Code style checking
