@@ -1,6 +1,8 @@
-require "active_support/core_ext/integer/time"
+# frozen_string_literal: true
 
-Rails.application.configure do
+require 'active_support/core_ext/integer/time'
+
+Rails.application.configure do # rubocop:todo Metrics/BlockLength
   config.session_store :cache_store
 
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
@@ -8,13 +10,13 @@ Rails.application.configure do
   config.action_mailer.delivery_method = :smtp
 
   ActionMailer::Base.smtp_settings = {
-    :address              => "smtp.gmail.com",
-    :port                 => 587,
-    :domain               => "gmail.com",
-    :user_name => ENV['SMTP_USER_NAME'],
-    :password => ENV['SMTP_PASSWORD'],
-    :authentication       => "plain",
-    :enable_starttls_auto => true
+    address: 'smtp.gmail.com',
+    port: 587,
+    domain: 'gmail.com',
+    user_name: ENV['SMTP_USER_NAME'],
+    password: ENV['SMTP_PASSWORD'],
+    authentication: 'plain',
+    enable_starttls_auto: true
   }
 
   # In the development environment your application's code is reloaded any time
@@ -30,17 +32,17 @@ Rails.application.configure do
 
   # Enable/disable caching. By default caching is disabled.
   # Run rails dev:cache to toggle caching.
-    config.action_controller.perform_caching = true
-    config.action_controller.enable_fragment_cache_logging = true
+  config.action_controller.perform_caching = true
+  config.action_controller.enable_fragment_cache_logging = true
 
-   # CHANGE the following line; it's :memory_store by default
-  config.cache_store = :redis_cache_store, {url: ENV.fetch("REDIS_URL") { "redis://localhost:6379/1" }}
+  # CHANGE the following line; it's :memory_store by default
+  config.cache_store = :redis_cache_store, { url: ENV.fetch('REDIS_URL', 'redis://localhost:6379/1') }
 
   # ADD the following line; it probably doesn't exist
-  config.session_store :cache_store, key: "_sessions_development", compress: true, pool_size: 5, expire_after: 1.year
-    config.public_file_server.headers = {
-      'Cache-Control' => "public, max-age=#{2.days.to_i}"
-    }
+  config.session_store :cache_store, key: '_sessions_development', compress: true, pool_size: 5, expire_after: 1.year
+  config.public_file_server.headers = {
+    'Cache-Control' => "public, max-age=#{2.days.to_i}"
+  }
   # Store uploaded files on the local file system (see config/storage.yml for options).
   config.active_storage.service = :local
 

@@ -9,7 +9,9 @@
 # Use this hook to configure devise mailer, warden hooks and so forth.
 # Many of these configuration options can be set straight in your model.
 Devise.setup do |config|
-  config.navigational_formats = ['/', :html, :turbo_stream]  # The secret key used by Devise. Devise uses this key to generate
+  # rubocop:todo Layout/LineLength
+  config.navigational_formats = ['/', :html, :turbo_stream] # The secret key used by Devise. Devise uses this key to generate
+  # rubocop:enable Layout/LineLength
   # random tokens. Changing this key will render invalid all existing
   # confirmation, reset password and unlock tokens in the database.
   # Devise will use the `secret_key_base` as its `secret_key`
@@ -126,7 +128,9 @@ Devise.setup do |config|
   config.stretches = Rails.env.test? ? 1 : 12
 
   # Set up a pepper to generate the hashed password.
+  # rubocop:todo Layout/LineLength
   # config.pepper = 'cf480a7c31734639fbd8b61bc983484181886b12d9811f44e9356b300b12f2358e8e12db026f00794a4dec2d40ca60f164040f08fc86710b4e207657371337b1'
+  # rubocop:enable Layout/LineLength
 
   # Send a notification to the original email when the user's email is changed.
   # config.send_email_changed_notification = false
@@ -274,8 +278,8 @@ Devise.setup do |config|
   # config.omniauth :github, 'APP_ID', 'APP_SECRET', scope: 'user,public_repo'
 
   env_creds = Rails.application.credentials[Rails.env.to_sym] || {}
-  %i{ facebook twitter github }.each do |provider|
-    if options = env_creds[provider]
+  %i[facebook twitter github].each do |provider|
+    if options = env_creds[provider] # rubocop:todo Lint/AssignmentInCondition
       config.omniauth provider, options[:app_id], options[:app_secret], options.fetch(:options, {})
     end
   end

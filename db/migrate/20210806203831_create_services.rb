@@ -1,5 +1,7 @@
-class CreateServices < ActiveRecord::Migration[6.1]
-  def change
+# frozen_string_literal: true
+
+class CreateServices < ActiveRecord::Migration[6.1] # rubocop:todo Style/Documentation
+  def change # rubocop:todo Metrics/MethodLength
     create_table :services do |t|
       t.references :user, null: false, foreign_key: true
       t.string :provider

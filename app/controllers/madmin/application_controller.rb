@@ -1,5 +1,7 @@
+# frozen_string_literal: true
+
 module Madmin
-  class ApplicationController < Madmin::BaseController
+  class ApplicationController < Madmin::BaseController # rubocop:todo Style/Documentation
     before_action :authenticate_admin_user
 
     def authenticate_admin_user
@@ -17,6 +19,8 @@ module Madmin
     # before_action :authenticate_user!
 
     # Authenticate with Basic Auth
+    # rubocop:todo Layout/LineLength
     # http_basic_authenticate_with(name: Rails.application.credentials.admin_username, password: Rails.application.credentials.admin_password)
+    # rubocop:enable Layout/LineLength
   end
 end

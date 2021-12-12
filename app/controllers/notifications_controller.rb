@@ -1,4 +1,6 @@
-class NotificationsController < ApplicationController
+# frozen_string_literal: true
+
+class NotificationsController < ApplicationController # rubocop:todo Style/Documentation
   before_action :authenticate_user!
 
   def index

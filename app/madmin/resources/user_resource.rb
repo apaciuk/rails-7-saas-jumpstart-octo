@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 class UserResource < Madmin::Resource
   # Attributes
   attribute :id, form: false

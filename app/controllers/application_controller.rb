@@ -1,4 +1,6 @@
-class ApplicationController < ActionController::Base
+# frozen_string_literal: true
+
+class ApplicationController < ActionController::Base # rubocop:todo Style/Documentation
   include Pundit
 
   protect_from_forgery with: :exception
@@ -8,8 +10,8 @@ class ApplicationController < ActionController::Base
 
   protected
 
-    def configure_permitted_parameters
-      devise_parameter_sanitizer.permit(:sign_up, keys: [:name])
-      devise_parameter_sanitizer.permit(:account_update, keys: [:name, :avatar])
-    end
+  def configure_permitted_parameters
+    devise_parameter_sanitizer.permit(:sign_up, keys: [:name])
+    devise_parameter_sanitizer.permit(:account_update, keys: %i[name avatar])
+  end
 end

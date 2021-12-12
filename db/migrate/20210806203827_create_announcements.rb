@@ -1,4 +1,6 @@
-class CreateAnnouncements < ActiveRecord::Migration[6.1]
+# frozen_string_literal: true
+
+class CreateAnnouncements < ActiveRecord::Migration[6.1] # rubocop:todo Style/Documentation
   def change
     create_table :announcements do |t|
       t.datetime :published_at

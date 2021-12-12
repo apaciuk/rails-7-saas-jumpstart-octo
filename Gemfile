@@ -1,11 +1,13 @@
+# frozen_string_literal: true
+
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
-ruby "3.0.0"
+ruby '3.0.0'
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
-gem "rails", "~> 7.0.0.alpha2"
+gem 'rails', '~> 7.0.0.alpha2'
 # use postgresql
-gem 'pg', "~> 1.2.3"
+gem 'pg', '~> 1.2.3'
 # Use Puma as the app server
 gem 'puma'
 # Use SCSS for stylesheets
@@ -24,17 +26,16 @@ gem 'bootsnap', '>= 1.4.4', require: false
 #  test components
 gem 'view_component'
 
-
 group :development do
   # Code style checking
-  gem "rubocop", "~> 1.23"
-  gem "rubocop-rails", "~> 2.12"
- # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
+  gem 'rubocop', '~> 1.23'
+  gem 'rubocop-rails', '~> 2.12'
+  # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
   gem 'web-console', '>= 4.1.0'
   # Display performance information such as SQL time and flame graphs for each request in your browser.
   # Can be configured to work on production as well see: https://github.com/MiniProfiler/rack-mini-profiler/blob/master/README.md
-  gem 'rack-mini-profiler', '~> 2.0'
   gem 'listen', '~> 3.3'
+  gem 'rack-mini-profiler', '~> 2.0'
 end
 
 # Nominal basic CSS framework & Icon fonts, can be swapped out.
@@ -43,10 +44,10 @@ gem 'font-awesome-sass', '~> 5.15'
 # IDs
 gem 'friendly_id', '~> 5.4'
 # Javascript options
-gem 'turbo-rails'
+gem 'cable_ready'
 gem 'hotwire-rails'
-gem "cable_ready"
-gem "stimulus_reflex"
+gem 'stimulus_reflex'
+gem 'turbo-rails'
 # Use Active Storage variant
 gem 'image_processing'
 # Admin
@@ -70,10 +71,6 @@ gem 'sidekiq', '~> 6.2'
 gem 'sitemap_generator', '~> 6.1'
 gem 'whenever', require: false
 # Env variables
-gem "dotenv-rails", "~> 2.7"
+gem 'dotenv-rails', '~> 2.7'
 # Favicon
-gem "rails_real_favicon", "~> 0.1.1"
-
-
-
-
+gem 'rails_real_favicon', '~> 0.1.1'

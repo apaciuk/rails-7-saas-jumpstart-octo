@@ -1,25 +1,28 @@
+# frozen_string_literal: true
+
 module Users
-  class OmniauthCallbacksController < Devise::OmniauthCallbacksController
+  class OmniauthCallbacksController < Devise::OmniauthCallbacksController # rubocop:todo Style/Documentation
     before_action :set_service
     before_action :set_user
 
     attr_reader :service, :user
 
     def facebook
-      handle_auth "Facebook"
+      handle_auth 'Facebook'
     end
 
     def twitter
-      handle_auth "Twitter"
+      handle_auth 'Twitter'
     end
 
     def github
-      handle_auth "Github"
+      handle_auth 'Github'
     end
 
     private
 
-    def handle_auth(kind)
+    # rubocop:todo Metrics/MethodLength
+    def handle_auth(kind) # rubocop:todo Metrics/AbcSize, Metrics/MethodLength
       if service.present?
         service.update(service_attrs)
       else
@@ -34,6 +37,7 @@ module Users
         set_flash_message :notice, :success, kind: kind
       end
     end
+    # rubocop:enable Metrics/MethodLength
 
     def auth
       request.env['omniauth.auth']
@@ -43,28 +47,31 @@ module Users
       @service = Service.where(provider: auth.provider, uid: auth.uid).first
     end
 
-    def set_user
+    def set_user # rubocop:todo Metrics/AbcSize, Metrics/MethodLength
       if user_signed_in?
         @user = current_user
       elsif service.present?
         @user = service.user
       elsif User.where(email: auth.info.email).any?
         # 5. User is logged out and they login to a new account which doesn't match their old one
-        flash[:alert] = "An account with this email already exists. Please sign in with that account before connecting your #{auth.provider.titleize} account."
+        flash[:alert] =
+          # rubocop:todo Layout/LineLength
+          "An account with this email already exists. Please sign in with that account before connecting your #{auth.provider.titleize} account."
+        # rubocop:enable Layout/LineLength
         redirect_to new_user_session_path
       else
         @user = create_user
       end
     end
 
-    def service_attrs
+    def service_attrs # rubocop:todo Metrics/AbcSize
       expires_at = auth.credentials.expires_at.present? ? Time.at(auth.credentials.expires_at) : nil
       {
-          provider: auth.provider,
-          uid: auth.uid,
-          expires_at: expires_at,
-          access_token: auth.credentials.token,
-          access_token_secret: auth.credentials.secret,
+        provider: auth.provider,
+        uid: auth.uid,
+        expires_at: expires_at,
+        access_token: auth.credentials.token,
+        access_token_secret: auth.credentials.secret
       }
     end
 
@@ -72,9 +79,8 @@ module Users
       User.create(
         email: auth.info.email,
         username: auth.info.username,
-        password: Devise.friendly_token[0,20]
+        password: Devise.friendly_token[0, 20]
       )
     end
-
   end
 end

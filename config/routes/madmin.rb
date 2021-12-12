@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 # Below are the routes for madmin
 namespace :madmin do
   resources :services
@@ -13,5 +15,5 @@ namespace :madmin do
     resources :variant_records
   end
   resources :users
-  root to: "dashboard#show"
+  root to: 'dashboard#show'
 end

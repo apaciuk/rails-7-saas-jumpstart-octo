@@ -1,17 +1,23 @@
-module AvatarHelper
-  def avatar_path(object, options = {})
+# frozen_string_literal: true
+
+module AvatarHelper # rubocop:todo Style/Documentation
+  # rubocop:todo Metrics/PerceivedComplexity
+  # rubocop:todo Metrics/MethodLength
+  def avatar_path(object, options = {}) # rubocop:todo Metrics/CyclomaticComplexity, Metrics/MethodLength, Metrics/PerceivedComplexity
     size = options[:size] || 180
-    default_image = options[:default] || "mp"
-    base_url =  "https://secure.gravatar.com/avatar"
+    default_image = options[:default] || 'mp'
+    base_url = 'https://secure.gravatar.com/avatar'
     base_url_params = "?s=#{size}&d=#{default_image}"
 
     if object.respond_to?(:avatar) && object.avatar.attached? && object.avatar.variable?
       object.avatar.variant(resize_to_fill: [size, size, { gravity: 'Center' }])
     elsif object.respond_to?(:email) && object.email
-      gravatar_id = Digest::MD5::hexdigest(object.email.downcase)
+      gravatar_id = Digest::MD5.hexdigest(object.email.downcase)
       "#{base_url}/#{gravatar_id}#{base_url_params}"
     else
       "#{base_url}/00000000000000000000000000000000#{base_url_params}"
     end
   end
+  # rubocop:enable Metrics/MethodLength
+  # rubocop:enable Metrics/PerceivedComplexity
 end
