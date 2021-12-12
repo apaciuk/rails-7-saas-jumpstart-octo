@@ -1,0 +1,25 @@
+# Extensions
+require:
+  - rubocop-rails
+
+# Enable or disable new cops when gen updates are enabled
+Lint/RaisedException:
+  Enabled: true 
+Lint/StructNewOverride:
+  Enabled: true 
+Style/HashEachMethods:
+  Enabled: true  
+Style/HashTransformKeys: 
+  Enabled: true 
+Style/HashTransformValues: 
+  Enabled: true
+  
+# Cop files to ignore
+AllCops: 
+  Exclude: 
+   - Gemfile
+   - Rakefile
+   - 'node_modules/**/*'
+   - 'tmp/**/*'
+   - 'vendor/**/*'
+   - '.git/**/*'
