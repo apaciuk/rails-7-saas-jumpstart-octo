@@ -358,7 +358,7 @@ DEPENDENCIES
   omniauth-facebook (~> 8.0)
   omniauth-github (~> 2.0)
   omniauth-twitter (~> 1.4)
-  pg
+  pg (~> 1.2.3)
   puma
   pundit (~> 2.1)
   rack-mini-profiler (~> 2.0)
@@ -369,6 +369,7 @@ DEPENDENCIES
   sidekiq (~> 6.2)
   sitemap_generator (~> 6.1)
   stimulus_reflex
+  turbo-rails
   view_component
   web-console (>= 4.1.0)
   webpacker

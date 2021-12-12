@@ -5,7 +5,7 @@ ruby "3.0.0"
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem "rails", "~> 7.0.0.alpha2"
 # use postgresql
-gem 'pg'
+gem 'pg', "~> 1.2.3"
 # Use Puma as the app server
 gem 'puma'
 # Use SCSS for stylesheets
@@ -34,30 +34,39 @@ group :development do
   gem 'listen', '~> 3.3'
 end
 
-
-
+# Nominal basic CSS framework & Icon fonts, can be swapped out.
+gem 'bootstrap', '5.1.3'
+gem 'font-awesome-sass', '~> 5.15'
+# IDs
+gem 'friendly_id', '~> 5.4'
+# Javascript options
+gem 'turbo-rails'
+gem 'hotwire-rails'
 gem "cable_ready"
 gem "stimulus_reflex"
-gem 'bootstrap', '5.1.3'
-gem 'devise', git: 'https://github.com/heartcombo/devise', branch: 'main'
-gem 'devise_masquerade', '~> 1.3'
-gem 'font-awesome-sass', '~> 5.15'
-gem 'friendly_id', '~> 5.4'
-gem 'hotwire-rails'
 # Use Active Storage variant
 gem 'image_processing'
 # Admin
 gem 'madmin'
+# Compress Full name
 gem 'name_of_person', '~> 1.1'
+# Notifications
 gem 'noticed', '~> 1.2'
+# Social Media Auth
 gem 'omniauth-facebook', '~> 8.0'
 gem 'omniauth-github', '~> 2.0'
 gem 'omniauth-twitter', '~> 1.4'
+# Auth, Logins, Tokens
+gem 'devise', git: 'https://github.com/heartcombo/devise', branch: 'main'
+gem 'devise_masquerade', '~> 1.3'
+# Auth Roles w Devise
 gem 'pundit', '~> 2.1'
+# Processes
 gem 'sidekiq', '~> 6.2'
+# Sitemap
 gem 'sitemap_generator', '~> 6.1'
 gem 'whenever', require: false
-
+# Env variables
 gem "dotenv-rails", "~> 2.7"
-
+# Favicon
 gem "rails_real_favicon", "~> 0.1.1"
