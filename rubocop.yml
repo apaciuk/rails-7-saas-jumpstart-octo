@@ -23,3 +23,6 @@ AllCops:
    - 'tmp/**/*'
    - 'vendor/**/*'
    - '.git/**/*'
+
+Layout/LineLength:
+  Max: 99
