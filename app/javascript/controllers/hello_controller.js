@@ -8,9 +8,9 @@
 // </div>
 
 import { Controller } from "stimulus"
-
+import { Request } from '@rails/request.js'
 export default class extends Controller {
-  static targets = [ "output" ]
+  static targets = ["output"]
 
   connect() {
     this.outputTarget.textContent = 'Hello, Stimulus!'
