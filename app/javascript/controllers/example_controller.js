@@ -1,5 +1,6 @@
 import ApplicationController from './application_controller'
-/* Example request js functions */
+
+/* Example Request js functions */
 import { FetchRequest } from "@rails/request.js"
 import { navigator } from "@hotwired/turbo"
 
