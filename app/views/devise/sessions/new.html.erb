@@ -7,7 +7,7 @@
         <%= f.email_field :email, autofocus: true, placeholder: 'Email Address', class: 'form-control' %>
       </div>
 
-      <div class="mb-3">
+      <div class="mb-4">
         <%= f.password_field :password, autocomplete: "off", placeholder: 'Password', class: 'form-control' %>
       </div>
 
@@ -19,7 +19,7 @@
           </label>
         </div>
       <% end -%>
-      <div class="mb-3 mt-1 d-grid">
+      <div class="mb-3 d-grid">
         <%= f.submit "Log in", class: "btn btn-outline-dark btn-lg" %>
       </div>
     <% end %>
