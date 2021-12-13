@@ -6,7 +6,8 @@ import { definitionsFromContext } from "stimulus/webpack-helpers"
 import StimulusReflex from 'stimulus_reflex'
 import consumer from '../channels/consumer'
 import controller from '../controllers/application_controller'
-// Example request import, is declared in request.d.ts
+
+/* Example request js functions */
 import { FetchRequest } from "@rails/request.js"
 import { navigator } from "@hotwired/turbo"
 
@@ -30,7 +31,9 @@ export function get(url, options) {
     const request = new FetchRequest("get", url, options)
     return withProgress(request.perform())
 }
+/* End Examples */
 
+// Start application
 const application = Application.start()
 const context = require.context("controllers", true, /_controller\.js$/)
 application.load(definitionsFromContext(context))
