@@ -1,4 +1,29 @@
 import ApplicationController from './application_controller'
+/* Example request js functions */
+import { FetchRequest } from "@rails/request.js"
+import { navigator } from "@hotwired/turbo"
+
+function showProgressBar() {
+  navigator.delegate.adapter.progressBar.setValue(0)
+  navigator.delegate.adapter.progressBar.show()
+}
+function hideProgressBar() {
+  navigator.delegate.adapter.progressBar.setValue(1)
+  navigator.delegate.adapter.progressBar.hide()
+}
+export function withProgress(request) {
+  showProgressBar()
+
+  return request.then((response) => {
+    hideProgressBar()
+    return response
+  })
+}
+export function get(url, options) {
+  const request = new FetchRequest("get", url, options)
+  return withProgress(request.perform())
+}
+/* End Examples */
 
 /* This is the custom StimulusReflex controller for the Example Reflex.
  * Learn more at: https://docs.stimulusreflex.com
@@ -16,10 +41,11 @@ export default class extends ApplicationController {
    * call super if you intend to do anything else when this controller connects.
   */
 
-  connect () {
+  connect() {
     super.connect()
     // add your code here, if applicable
   }
+
 
   /* Reflex specific lifecycle methods.
    *
