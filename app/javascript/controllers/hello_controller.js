@@ -7,7 +7,7 @@
 //   <h1 data-target="hello.output"></h1>
 // </div>
 
-import { Controller } from "stimulus"
+import { Controller } from 'stimulus'
 import { Request } from '@rails/request.js'
 export default class extends Controller {
   static targets = ["output"]
