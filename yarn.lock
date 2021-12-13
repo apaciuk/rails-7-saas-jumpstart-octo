@@ -966,10 +966,10 @@
   dependencies:
     spark-md5 "^3.0.0"
 
-"@rails/request.js@^0.0.4":
-  version "0.0.4"
-  resolved "https://registry.yarnpkg.com/@rails/request.js/-/request.js-0.0.4.tgz#3d35f6ed2ec6f32057cd53c5b75c2e4b7455ea2b"
-  integrity sha512-hOSnvj6HIHzL74A6LmmQ5D907CJSUMlowv6WW7x7DyGIeGltHLC+KLy2olcpg0C1rNX/VXbKbhNH6maQN9eiPg==
+"@rails/request.js@^0.0.6":
+  version "0.0.6"
+  resolved "https://registry.yarnpkg.com/@rails/request.js/-/request.js-0.0.6.tgz#5f0347a9f363e50ec45118c7134080490cda81d8"
+  integrity sha512-dfFWaQXitYJ4kxrgGJNhDNXX54/v10YgoJqBMVe6lhqs6a4N9WD7goZJEvwin82TtK8MqUNhwfyisgKwM6dMdg==
 
 "@rails/ujs@^6.0.0":
   version "6.1.4"

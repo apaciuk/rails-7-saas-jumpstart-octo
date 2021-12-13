@@ -7,13 +7,13 @@ ruby '3.0.0'
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
 gem 'rails', '~> 7.0.0.alpha2'
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
-gem "sprockets-rails", ">= 3.4.1"
+gem 'sprockets-rails', '>= 3.4.1'
 # use postgresql
 gem 'pg', '~> 1.2.3'
 # Use Puma as the app server
 gem 'puma'
 # Use SCSS for stylesheets
-#gem 'sass-rails'
+# gem 'sass-rails'
 # Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
 gem 'webpacker'
 # Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
@@ -29,14 +29,14 @@ gem 'bootsnap', '>= 1.4.4', require: false
 gem 'view_component'
 # Rspec testing
 group :development, :test do
-gem 'rspec-rails', '~> 5.0'
+  gem 'rspec-rails', '~> 5.0'
 end
 
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
-  gem "capybara", ">= 3.26"
-  gem "selenium-webdriver", ">= 4.0.0"
-  gem "webdrivers"
+  gem 'capybara', '>= 3.26'
+  gem 'selenium-webdriver', '>= 4.0.0'
+  gem 'webdrivers'
 end
 
 group :development do
@@ -57,13 +57,13 @@ gem 'font-awesome-sass', '~> 5.15'
 # IDs
 gem 'friendly_id', '~> 5.4'
 # Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
-gem "importmap-rails", ">= 0.9.2"
+gem 'importmap-rails', '>= 0.9.2'
 # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
-gem "turbo-rails", ">= 0.9.0"
+gem 'turbo-rails', '>= 0.9.0'
 # Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
-gem "stimulus-rails", ">= 0.7.3"
 gem 'cable_ready'
 gem 'hotwire-rails'
+gem 'stimulus-rails', '>= 0.7.3'
 gem 'stimulus_reflex'
 # Use Active Storage variant
 gem 'image_processing'
@@ -92,4 +92,4 @@ gem 'dotenv-rails', '~> 2.7'
 # Favicon
 gem 'rails_real_favicon', '~> 0.1.1'
 # Sync Github
-gem "git-up", "~> 0.5.12"
+gem 'git-up', '~> 0.5.12'
