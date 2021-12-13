@@ -10,6 +10,8 @@
 import { Controller } from 'stimulus'
 // Example request import, is declared in request.d.ts
 import { Request } from '@rails/request.js'
+
+
 export default class extends Controller {
   static targets = ["output"]
 
