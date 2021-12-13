@@ -24,7 +24,7 @@ export function get(url, options) {
   const request = new FetchRequest("get", url, options)
   return withProgress(request.perform())
 }
-/* End Examples */
+/* End Request Examples */
 
 /* This is the custom StimulusReflex controller for the Example Reflex.
  * Learn more at: https://docs.stimulusreflex.com
