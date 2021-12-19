@@ -24,18 +24,21 @@ Rails 7.0.0 up
 
 1. $ bundle install/update (if change any gems)
 2. $ yarn  (engine node v 16.0.0)
-3. set db credentials config/database.yaml (postgres)
-4. $ rails db:create
-5. $ rails db:migrate
-6. Is set up to send user signup mail with gmail, alter smtp or other mail credentials (.env, application_mailer, devise.rb & development.rb), then test signup confirmation emails by signing up & confirming user email
+3. $ rails css:install:bootstrap
+4. set db credentials config/database.yaml (postgres)
+5. $ rails db:create
+6. $ rails db:migrate
+7. Is set up to send user signup mail with gmail, alter smtp or other mail credentials (.env, application_mailer, devise.rb & development.rb), then test signup confirmation emails by signing up & confirming user email
 copy .env.example > .env and enter details, or adapt to suit yours.
-7. $ rails stimulus_reflex:install
-8. $ rails dev:cache (check, should be cached, if not run again)
-9. $ rails g madmin:install  (if not, have to alter nav)
-10. $ rails g madmin:views  (overwrite)
-11. $ rails generate favicon  (put your favicon.png in assets/images, along with favicon.json in config folder)
+
+8. $ rails stimulus_reflex:install (OPTIONAL, extra config needed))
+
+9. $ rails dev:cache (check, should be cached, if not run again)
+10. $ rails g madmin:install  (if not, have to alter nav)
+11. $ rails g madmin:views  (overwrite)
+12. $ rails generate favicon  (put your favicon.png in assets/images, along with favicon.json in config folder)
     (see https://realfavicongenerator.net/)  for more info.
-12. $ rails g rspec:install  (for testing)
+13. $ rails g rspec:install  (for testing)
 
 * Woot woot  Start server!
 
