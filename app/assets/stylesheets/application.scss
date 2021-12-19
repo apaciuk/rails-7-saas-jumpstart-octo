@@ -1,47 +1,16 @@
-@import "fontawesome/fontawesome";
-@import "bootstrap/bootstrap";
-
-// Global Fixes, likely keep these.
-// Fixes bootstrap nav-brand container overlap
-@include media-breakpoint-down(xs) {
-  .container {
-    margin-left: 0;
-    margin-right: 0;
-  }
-}
-// Navbar color, Bootstrap, here is a gradient, can change to suit, solid, light etc.
-.navbar-dark {
-  background-color: #000000;
-  background-image: linear-gradient(147deg, #000000 0%, #2c3e50 74%);
-}
-// Masquerade alert shouldn't have a bottom margin
-body > .alert {
-  margin-bottom: 0;
-}
-// Announcements
-.announcement {
-  strong {
-    color: $gray-700;
-    font-weight: 900;
-  }
-}
-.unread-announcements:before {
-  -moz-border-radius: 50%;
-  -webkit-border-radius: 50%;
-  border-radius: 50%;
-  -webkit-background-clip: padding-box;
-  background-clip: padding-box;
-  background: $red;
-  content: '';
-  display: inline-block;
-  height: 8px;
-  width: 8px;
-  margin-right: 6px;
-}
-// Nominal basic front page styling, can remove.
-.jumbotron {
-  background:#f5f2f2;
-  padding: 20px;
-}
-
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS (and SCSS, if configured) file within this directory, lib/assets/stylesheets, or any plugin's
+ * vendor/assets/stylesheets directory can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the bottom of the
+ * compiled file so the styles you add here take precedence over styles defined in any other CSS
+ * files in this directory. Styles in this file should be added after the last require_* statement.
+ * It is generally better to create a new file per style scope.
+ *
+ *= require_tree .
+ *= require_self
+ */
 

@@ -1,28 +1,421 @@
-# Extensions
+
+# The behavior of RuboCop can be controlled via the .rubocop.yml
+# configuration file. It makes it possible to enable/disable
+# certain cops (checks) and to alter their behavior if they accept
+# any parameters. The file can be placed either in your home
+# directory or in some project directory.
+#
+# RuboCop will start looking for the configuration file in the directory
+# where the inspected file is and continue its way up to the root directory.
+#
+
+inherit_from:
+  - '.rubocop-performance.yml'
+  - '.rubocop-rails.yml'
+
 require:
+  - rubocop-performance
   - rubocop-rails
 
-# Enable or disable new cops when gen updates are enabled
-Lint/RaisedException:
-  Enabled: true 
-Lint/StructNewOverride:
-  Enabled: true 
-Style/HashEachMethods:
-  Enabled: true  
-Style/HashTransformKeys: 
-  Enabled: true 
-Style/HashTransformValues: 
+AllCops:
+  TargetRubyVersion: 2.7
+  TargetRailsVersion: 6.0
+  Exclude:
+    - '**/db/migrate/*'
+    - 'db/schema.rb'
+    - '**/Gemfile.lock'
+    - '**/Rakefile'
+    - '**/rails'
+    - '**/vendor/**/*'
+    - '**/spec_helper.rb'
+    - 'node_modules/**/*'
+    - 'bin/*'
+
+###########################################################
+###################### RuboCop ############################
+###########################################################
+
+# You can find all configuration options for rubocop here: https://docs.rubocop.org/rubocop/cops_bundler.html
+
+###########################################################
+####################### Gemspec ###########################
+###########################################################
+
+Gemspec/DateAssignment: # (new in 1.10)
   Enabled: true
-  
-# Cop files to ignore
-AllCops: 
-  Exclude: 
-   - Gemfile
-   - Rakefile
-   - 'node_modules/**/*'
-   - 'tmp/**/*'
-   - 'vendor/**/*'
-   - '.git/**/*'
+
+###########################################################
+######################## Layout ###########################
+###########################################################
+
+Layout/ClassStructure:
+  ExpectedOrder:
+    - module_inclusion
+    - constants
+    - association
+    - public_attribute_macros
+    - public_delegate
+    - macros
+    - initializer
+    - public_class_methods
+    - public_methods
+    - protected_attribute_macros
+    - protected_methods
+    - private_attribute_macros
+    - private_delegate
+    - private_methods
+
+Layout/EmptyLineAfterMultilineCondition:
+  Enabled: true
+
+Layout/EmptyLinesAroundAttributeAccessor:
+  Enabled: true
+
+Layout/FirstArrayElementIndentation:
+  EnforcedStyle: consistent
+
+Layout/FirstArrayElementLineBreak:
+  Enabled: true
+
+Layout/FirstHashElementIndentation:
+  EnforcedStyle: consistent
+
+Layout/FirstHashElementLineBreak:
+  Enabled: true
+
+Layout/LineEndStringConcatenationIndentation: # (new in 1.18)
+  Enabled: true
 
 Layout/LineLength:
-  Max: 99
+  Max: 150
+  Exclude:
+    - '**/spec/**/*'
+
+Layout/MultilineArrayBraceLayout:
+  EnforcedStyle: new_line
+
+Layout/MultilineOperationIndentation:
+  EnforcedStyle: indented
+
+Layout/MultilineHashBraceLayout:
+  EnforcedStyle: new_line
+
+Layout/MultilineHashKeyLineBreaks:
+  Enabled: true
+
+Layout/MultilineMethodCallBraceLayout:
+  EnforcedStyle: new_line
+
+Layout/MultilineMethodDefinitionBraceLayout:
+  EnforcedStyle: new_line
+
+Layout/SpaceAroundMethodCallOperator:
+  Enabled: true
+
+Layout/SpaceBeforeBrackets: # (new in 1.7)
+  Enabled: true
+
+Layout/SpaceInLambdaLiteral:
+  EnforcedStyle: require_space
+
+
+###########################################################
+######################## Lint #############################
+###########################################################
+
+Lint/AmbiguousAssignment: # (new in 1.7)
+  Enabled: true
+
+Lint/AmbiguousBlockAssociation:
+  Exclude:
+    - '**/spec/**/*'
+
+Lint/AssignmentInCondition:
+  AllowSafeAssignment: false
+
+Lint/BinaryOperatorWithIdenticalOperands:
+  Enabled: true
+
+Lint/DeprecatedConstants: # (new in 1.8)
+  Enabled: true
+
+Lint/DeprecatedOpenSSLConstant:
+  Enabled: true
+
+Lint/DuplicateBranch: # (new in 1.3)
+  Enabled: true
+
+Lint/DuplicateElsifCondition:
+  Enabled: true
+
+Lint/DuplicateRegexpCharacterClassElement: # (new in 1.1)
+  Enabled: true
+
+Lint/DuplicateRequire:
+  Enabled: true
+
+Lint/DuplicateRescueException:
+  Enabled: true
+
+Lint/EmptyBlock: # (new in 1.1)
+  Enabled: true
+
+Lint/EmptyClass: # (new in 1.3)
+  Enabled: true
+
+Lint/EmptyConditionalBody:
+  Enabled: true
+
+Lint/EmptyFile:
+  Enabled: true
+
+Lint/EmptyInPattern: # (new in 1.16)
+  Enabled: true
+
+Lint/FloatComparison:
+  Enabled: true
+
+Lint/LambdaWithoutLiteralBlock: # (new in 1.8)
+  Enabled: true
+
+Lint/MissingSuper:
+  Enabled: true
+
+Lint/MixedRegexpCaptureTypes:
+  Enabled: true
+
+Lint/NoReturnInBeginEndBlocks: # (new in 1.2)
+  Enabled: true
+
+Lint/NumberConversion:
+  Enabled: true
+
+Lint/NumberedParameterAssignment: # (new in 1.9)
+  Enabled: true
+
+Lint/OrAssignmentToConstant: # (new in 1.9)
+  Enabled: true
+
+Lint/RaiseException:
+  Enabled: true
+
+Lint/RedundantDirGlobSort: # (new in 1.8)
+  Enabled: true
+
+Lint/SelfAssignment:
+  Enabled: true
+
+Lint/SymbolConversion: # (new in 1.9)
+  Enabled: true
+
+Lint/ToEnumArguments: # (new in 1.1)
+  Enabled: true
+
+Lint/TrailingCommaInAttributeDeclaration:
+  Enabled: true
+
+Lint/TripleQuotes: # (new in 1.9)
+  Enabled: true
+
+Lint/UnexpectedBlockArity: # (new in 1.5)
+  Enabled: true
+
+Lint/UnmodifiedReduceAccumulator: # (new in 1.1)
+  Enabled: true
+
+Lint/UnusedBlockArgument:
+  IgnoreEmptyBlocks: false
+
+Lint/UnusedMethodArgument:
+  IgnoreEmptyMethods: false
+
+Lint/UselessMethodDefinition:
+  Enabled: true
+
+###########################################################
+######################## Metric ###########################
+###########################################################
+
+Metrics/AbcSize:
+ Max: 45
+
+Metrics/BlockLength:
+  CountComments: false
+  Max: 50
+  Exclude:
+    - '**/spec/**/*'
+    - '**/*.rake'
+    - '**/factories/**/*'
+    - '**/config/routes.rb'
+
+Metrics/ClassLength:
+  CountAsOne: ['array', 'hash']
+  Max: 150
+
+Metrics/CyclomaticComplexity:
+  Max: 10
+
+Metrics/MethodLength:
+  CountAsOne: ['array', 'hash']
+  Max: 30
+
+Metrics/ModuleLength:
+  CountAsOne: ['array', 'hash']
+  Max: 250
+  Exclude:
+    - '**/spec/**/*'
+
+Metrics/PerceivedComplexity:
+  Max: 10
+
+###########################################################
+######################## Naming ###########################
+###########################################################
+
+Naming/InclusiveLanguage: # (new in 1.18)
+  Enabled: true
+
+###########################################################
+######################## Style ############################
+###########################################################
+
+Style/AccessorGrouping:
+  Enabled: true
+
+Style/ArgumentsForwarding: # (new in 1.1)
+  Enabled: true
+
+Style/ArrayCoercion:
+  Enabled: true
+
+Style/AutoResourceCleanup:
+  Enabled: true
+
+Style/BisectedAttrAccessor:
+  Enabled: true
+
+Style/CaseLikeIf:
+  Enabled: true
+
+Style/ClassAndModuleChildren:
+  Enabled: false
+
+Style/CollectionCompact: # (new in 1.2)
+  Enabled: true
+
+Style/CollectionMethods:
+  Enabled: true
+
+Style/CombinableLoops:
+  Enabled: true
+
+Style/CommandLiteral:
+  EnforcedStyle: percent_x
+
+Style/ConstantVisibility:
+  Enabled: true
+
+Style/Documentation:
+  Enabled: false
+
+Style/DocumentDynamicEvalDefinition: # (new in 1.1)
+  Enabled: true
+
+Style/EndlessMethod: # (new in 1.8)
+  Enabled: true
+
+Style/ExplicitBlockArgument:
+  Enabled: true
+
+Style/GlobalStdStream:
+  Enabled: true
+
+Style/HashConversion: # (new in 1.10)
+  Enabled: true
+
+Style/HashEachMethods:
+  Enabled: true
+
+Style/HashExcept: # (new in 1.7)
+  Enabled: true
+
+Style/HashLikeCase:
+  Enabled: true
+
+Style/HashTransformKeys:
+  Enabled: true
+
+Style/HashTransformValues:
+  Enabled: true
+
+Style/IfWithBooleanLiteralBranches: # (new in 1.9)
+  Enabled: true
+
+Style/ImplicitRuntimeError:
+  Enabled: true
+
+Style/InlineComment:
+  Enabled: true
+
+Style/InPatternThen: # (new in 1.16)
+  Enabled: true
+
+Style/IpAddresses:
+  Enabled: true
+
+Style/KeywordParametersOrder:
+  Enabled: true
+
+Style/MethodCallWithArgsParentheses:
+  Enabled: true
+
+Style/MissingElse:
+  Enabled: true
+
+Style/MultilineInPatternThen: # (new in 1.16)
+  Enabled: true
+
+Style/MultilineMethodSignature:
+  Enabled: true
+
+Style/NegatedIfElseCondition: # (new in 1.2)
+  Enabled: true
+
+Style/NilLambda: # (new in 1.3)
+  Enabled: true
+
+Style/OptionalBooleanParameter:
+  Enabled: true
+
+Style/QuotedSymbols: # (new in 1.16)
+  Enabled: true
+
+Style/RedundantArgument: # (new in 1.4)
+  Enabled: true
+
+Style/RedundantAssignment:
+  Enabled: true
+
+Style/RedundantBegin:
+  Enabled: true
+
+Style/RedundantFetchBlock:
+  Enabled: true
+
+Style/RedundantFileExtensionInRequire:
+  Enabled: true
+
+Style/RedundantSelfAssignment:
+  Enabled: true
+
+Style/SingleArgumentDig:
+  Enabled: true
+
+Style/StringChars: # (new in 1.12)
+  Enabled: true
+
+Style/StringConcatenation:
+  Enabled: true
+
+Style/SwapValues: # (new in 1.1)
+  Enabled: true

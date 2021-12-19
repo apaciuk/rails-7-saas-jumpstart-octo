@@ -5,11 +5,6 @@
     <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
       <%= render "devise/shared/error_messages", resource: resource %>
 
-
-      <div class="mb-3">
-        <%= f.text_field :username, autofocus: false, class: 'form-control', placeholder: "User name" %>
-      </div>
-
       <div class="mb-3">
         <%= f.text_field :name, autofocus: false, class: 'form-control', placeholder: "Full name" %>
       </div>

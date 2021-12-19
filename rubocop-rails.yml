@@ -1,0 +1,83 @@
+# You can find all configuration options for rubocop-rails here: https://docs.rubocop.org/rubocop-rails/cops_rails.html
+
+Rails/ActiveRecordCallbacksOrder:
+  Enabled: true
+
+Rails/AddColumnIndex: # (new in 2.11)
+  Enabled: true
+
+Rails/AfterCommitOverride:
+  Enabled: true
+
+Rails/AttributeDefaultBlockValue: # (new in 2.9)
+  Enabled: true
+
+Rails/DefaultScope:
+  Enabled: true
+
+Rails/EagerEvaluationLogMessage: # (new in 2.11)
+  Enabled: true
+
+Rails/ExpandedDateRange: # (new in 2.11)
+  Enabled: true
+
+Rails/FindById:
+  Enabled: true
+
+Rails/I18nLocaleAssignment: # (new in 2.11)
+  Enabled: true
+
+Rails/Inquiry:
+  Enabled: true
+
+Rails/MailerName:
+  Enabled: true
+
+Rails/MatchRoute:
+  Enabled: true
+
+Rails/NegateInclude:
+  Enabled: true
+
+Rails/OrderById:
+  Enabled: true
+
+Rails/Pluck:
+  Enabled: true
+
+Rails/PluckId:
+  Enabled: true
+
+Rails/PluckInWhere:
+  Enabled: true
+
+Rails/RenderInline:
+  Enabled: true
+
+Rails/RenderPlainText:
+  Enabled: true
+
+Rails/SaveBang:
+  Enabled: true
+  AllowImplicitReturn: false
+
+Rails/ShortI18n:
+  Enabled: true
+
+Rails/SquishedSQLHeredocs: # (new in 2.8)
+  Enabled: true
+
+Rails/TimeZoneAssignment: # (new in 2.10)
+  Enabled: true
+
+Rails/UnusedIgnoredColumns: # (new in 2.11)
+  Enabled: true
+
+Rails/WhereEquals: # (new in 2.9)
+  Enabled: true
+
+Rails/WhereExists:
+  Enabled: true
+
+Rails/WhereNot:
+  Enabled: true

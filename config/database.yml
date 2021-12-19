@@ -19,13 +19,23 @@ default: &default
   encoding: unicode
   # For details on connection pooling, see Rails configuration guide
   # https://guides.rubyonrails.org/configuring.html#database-pooling
-  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %>
-  username: anton
+  pool: <%= ENV.fetch("RAILS_MAX_THREADS") { 5 } %> 
+  username: anton 
   password: postgres1
 
 development:
   <<: *default
-  database: jumpstart_development
+  database: rails_7_saas_jumpstart_development
+
+  # The specified database role being used to connect to postgres.
+  # To create additional roles in postgres see `$ createuser --help`.
+  # When left blank, postgres will use the default role. This is
+  # the same name as the operating system user running Rails.
+  #username: rails_7_saas_jumpstart
+
+  # The password associated with the postgres role (username).
+  #password:
+
   # Connect on a TCP socket. Omitted by default since the client uses a
   # domain socket that doesn't need configuration. Windows does not have
   # domain sockets, so uncomment these lines.
@@ -49,7 +59,7 @@ development:
 # Do not set this db to the same as development or production.
 test:
   <<: *default
-  database: jumpstart_test
+  database: rails_7_saas_jumpstart_test
 
 # As with config/credentials.yml, you never want to store sensitive information,
 # like your database password, in your source code. If your source code is
@@ -73,6 +83,6 @@ test:
 #
 production:
   <<: *default
-  database: jumpstart_production
-  username: anton
-  password: <%= ENV["LURVE_TRACKER_DATABASE_PASSWORD"] %>
+  database: rails_7_saas_jumpstart_production
+  username: rails_7_saas_jumpstart
+  password: <%= ENV["RAILS_7_SAAS_JUMPSTART_DATABASE_PASSWORD"] %>

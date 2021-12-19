@@ -2,69 +2,38 @@
 
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
+
 ruby '3.0.0'
 
 # Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
-gem 'rails', '~> 7.0.0.alpha2'
+gem 'rails', '~> 7.0.0'
+
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
-gem 'sprockets-rails', '>= 3.4.1'
-# use postgresql
-gem 'pg', '~> 1.2.3'
-# Use Puma as the app server
-gem 'puma'
-# Use SCSS for stylesheets
-# gem 'sass-rails'
-# Transpile app-like JavaScript. Read more: https://github.com/rails/webpacker
-gem 'webpacker'
-# Turbolinks makes navigating your web application faster. Read more: https://github.com/turbolinks/turbolinks
-# Build JSON APIs with ease. Read more: https://github.com/rails/jbuilder
-gem 'jbuilder'
-# Use Redis adapter to run Action Cable in production
-gem 'redis'
-# Use Active Model has_secure_password
-# gem 'bcrypt', '~> 3.1.7'
-# Reduces boot times through caching; required in config/boot.rb
-gem 'bootsnap', '>= 1.4.4', require: false
-#  test components
-gem 'view_component'
-# Rspec testing
-group :development, :test do
-  gem 'rspec-rails', '~> 5.0'
-end
+gem 'sprockets-rails'
 
-group :test do
-  # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
-  gem 'capybara', '>= 3.26'
-  gem 'selenium-webdriver', '>= 4.0.0'
-  gem 'webdrivers'
-end
+# Use postgresql as the database for Active Record
+gem 'pg', '~> 1.1'
 
-group :development do
-  # Code style checking
-  gem 'rubocop', '~> 1.23'
-  gem 'rubocop-rails', '~> 2.12'
-  # Access an interactive console on exception pages or by calling 'console' anywhere in the code.
-  gem 'web-console', '>= 4.1.0'
-  # Display performance information such as SQL time and flame graphs for each request in your browser.
-  # Can be configured to work on production as well see: https://github.com/MiniProfiler/rack-mini-profiler/blob/master/README.md
-  gem 'listen', '~> 3.3'
-  gem 'rack-mini-profiler', '~> 2.0'
-end
+# Use the Puma web server [https://github.com/puma/puma]
+gem 'puma', '~> 5.0'
+
+# Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
+gem 'importmap-rails'
+
+# Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
+gem 'turbo-rails'
+
+# Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
+gem 'stimulus-rails'
 
 # Nominal basic CSS framework & Icon fonts, can be swapped out.
 gem 'bootstrap', '5.1.3'
 gem 'font-awesome-sass', '~> 5.15'
 # IDs
 gem 'friendly_id', '~> 5.4'
-# Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
-gem 'importmap-rails', '>= 0.9.2'
-# Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
-gem 'turbo-rails', '>= 0.9.0'
 # Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
 gem 'cable_ready'
-gem 'hotwire-rails'
-gem 'stimulus-rails', '>= 0.7.3'
-gem 'stimulus_reflex'
+
 # Use Active Storage variant
 gem 'image_processing'
 # Admin
@@ -91,5 +60,48 @@ gem 'whenever', require: false
 gem 'dotenv-rails', '~> 2.7'
 # Favicon
 gem 'rails_real_favicon', '~> 0.1.1'
-# Sync Github
-gem 'git-up', '~> 0.5.12'
+
+# Build JSON APIs with ease [https://github.com/rails/jbuilder]
+gem 'jbuilder'
+
+# Use Redis adapter to run Action Cable in production
+gem 'redis', '~> 4.0'
+
+# Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
+# gem "kredis"
+
+# Reduces boot times through caching; required in config/boot.rb
+gem 'bootsnap', require: false
+
+# Use Sass to process CSS
+gem 'sassc-rails'
+
+group :development, :test do
+  gem 'rspec-rails', '~> 5.0'
+  gem 'rubocop', '~> 1.23', require: false
+  gem 'rubocop-performance', '~> 1.11.0', require: false
+  gem 'rubocop-rails', '~> 2.11.0', require: false
+  gem 'rubocop-rspec', '~> 2.6', require: false
+end
+
+group :development do
+  # Use console on exceptions pages [https://github.com/rails/web-console]
+  gem 'web-console'
+
+  # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
+  # gem "rack-mini-profiler"
+
+  # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
+  # gem "spring"
+end
+
+group :test do
+  # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
+  gem 'capybara'
+  gem 'selenium-webdriver'
+  gem 'webdrivers'
+end
+
+gem 'cssbundling-rails', '~> 1.0'
+
+gem 'jsbundling-rails', '~> 1.0'

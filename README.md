@@ -1,6 +1,6 @@
 # rails 7 sass jumpstart
 
-Epic Ruby On Rails 7 SaaS Jumpstart app with PostgreSQL, Bootstrap 5, Font Awesome 5, Devise, Noticed, Announcements, Madmin, Stimulus JS and Action Cable/Cable Ready, Request JS with Redis Caching
+Epic Ruby On Rails 7 SaaS Jumpstart app with PostgreSQL, Bootstrap 5, Font Awesome 5, Devise, Noticed, Announcements, Rollup, CSS Bundling, JS Bundling, Madmin, Hotwire, Stimulus JS and Action Cable/Cable Ready, Request JS with Redis Caching
 
 https://stimulus.hotwired.dev/
 
@@ -38,7 +38,6 @@ copy .env.example > .env and enter details, or adapt to suit yours.
 12. $ rails g rspec:install  (for testing)
 
 * Woot woot  Start server!
-(optional: bundle add foreman && foreman start)
 
 $ rails s
 
