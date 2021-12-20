@@ -4,10 +4,6 @@ Epic Ruby On Rails 7 SaaS Jumpstart app with PostgreSQL, Bootstrap 5, Font Aweso
 
 # JS & CSS Bundling with Rollup - no webpack/webpacker
 
-# todo
-
-Fix nav dropdown glitch and alert close button
-
 https://stimulus.hotwired.dev/
 
 https://docs.stimulusreflex.com/
@@ -43,6 +39,13 @@ copy .env.example > .env and enter details, or adapt to suit yours.
 12. $ rails generate favicon  (put your favicon.png in assets/images, along with favicon.json in config folder)
     (see https://realfavicongenerator.net/)  for more info.
 13. $ rails g rspec:install  (for testing)
+
+14. Run Importmap - examples 
+
+ ./bin/importmap
+ ./bin/importmap pin bootstrap  (pin bootstrap & popper, ie import)
+ ./bin/importmap json (show maps)
+
 
 * Woot woot  Start server!
 
