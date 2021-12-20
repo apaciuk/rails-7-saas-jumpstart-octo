@@ -2,6 +2,8 @@
 
 Epic Ruby On Rails 7 SaaS Jumpstart app with PostgreSQL, Bootstrap 5, Font Awesome 5, Devise, Noticed, Announcements, Rollup, CSS Bundling, JS Bundling, Madmin, Hotwire, Stimulus JS and Action Cable/Cable Ready, Request JS with Redis Caching
 
+# JS & CSS Bundling with Rollup - no webpack/webpacker
+
 https://stimulus.hotwired.dev/
 
 https://docs.stimulusreflex.com/
@@ -9,8 +11,6 @@ https://docs.stimulusreflex.com/
 Combine with Hotwire and Strada
 
 https://hotwired.dev/
-
-Also can be easily used with React/Vue via $rails webpacker:install:react (or vue) if required
 
 Style kept minimal so Bootstrap 5 can be swapped out for other CSS or UI if required
 
@@ -25,10 +25,10 @@ Rails 7.0.0 up
 1. $ bundle install/update (if change any gems)
 2. $ yarn  (engine node v 16.0.0)
 3. $ rails css:install:bootstrap
-4. set db credentials config/database.yaml (postgres)
+4. set db credentials config/database.yml (postgres)
 5. $ rails db:create
 6. $ rails db:migrate
-7. Is set up to send user signup mail with gmail, alter smtp or other mail credentials (.env, application_mailer, devise.rb & development.rb), then test signup confirmation emails by signing up & confirming user email
+7. Is set up to send basic user signup mail with gmail, alter smtp or other mail credentials (.env, application_mailer, devise.rb & development.rb), then test signup confirmation emails by signing up & confirming user email
 copy .env.example > .env and enter details, or adapt to suit yours.
 
 8. $ rails stimulus_reflex:install (OPTIONAL, extra config needed))

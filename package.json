@@ -5,6 +5,7 @@
     "@popperjs/core": "^2.11.0",
     "@rollup/plugin-node-resolve": "^13.1.1",
     "bootstrap": "^5.1.3",
+    "@rails/request.js": "^0.0.6",
     "@fortawesome/fontawesome-free": "^5.15.4",
     "rollup": "^2.61.1",
     "sass": "^1.45.0"
