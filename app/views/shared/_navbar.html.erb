@@ -1,4 +1,11 @@
-<nav class="navbar navbar-expand-md navbar-dark bg-dark" style="background-color: #000000; background-image: linear-gradient(147deg, #000000 0%, #2c3e50 74%);">
+<% if user_masquerade? %>
+  <div class="alert alert-warning text-center">
+    You're logged in as <b><%= current_user.name %> (<%= current_user.email %>)</b>
+    <%= link_to back_masquerade_path(current_user) do %><%= icon("fas", "times") %> Logout <% end %>
+  </div>
+<% end %>
+
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
   <div class="container mx-auto">
     <%= link_to image_tag('logo-160.png', :size => '160x29'), root_path, class: "navbar-brand" %>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarMain" aria-controls="navbarsExample04" aria-expanded="false" aria-label="Toggle navigation">
@@ -10,22 +17,34 @@
       </ul>
 
       <ul class="navbar-nav">
-        <li class="nav-item"><%= link_to "What's New", root_path, class: "nav-link #{(current_user)}" %></li>
-   
+        <li class="nav-item"><%= link_to "What's New", announcements_path, class: "nav-link #{unread_announcements(current_user)}" %></li>
+        <% if user_signed_in? %>
+
+        <li class="nav-item">
+          <%= link_to notifications_path, class: "nav-link" do %>
+            <span><i class="far fa-bell" aria-hidden="true"></i></span>
+          <% end %>
+         </li>
 
           <li class="nav-item dropdown">
-       
+            <%= link_to "#", id: "navbar-dropdown", class: "nav-link dropdown-toggle", data: { target: "nav-account-dropdown", bs_toggle: "dropdown" }, aria: { haspopup: true, expanded: false } do %>
+              <%= image_tag avatar_path(current_user, size: 40), height: 20, width: 20, class: "rounded" %>
+            <% end %>
             <div id="nav-account-dropdown" class="dropdown-menu dropdown-menu-end" aria-labelledby="navbar-dropdown">
-           
+              <%= link_to "Settings", edit_user_registration_path, class: "dropdown-item" %>
+              <% if current_user.admin? && respond_to?(:madmin_root_path) %>
+                <div class="dropdown-divider"></div>
+                <%= link_to "Admin Area", madmin_root_path, class: "dropdown-item" %>
+              <% end %>
               <div class="dropdown-divider"></div>
               <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
             </div>
           </li>
 
-      
+        <% else %>
           <li class="nav-item"><%= link_to "Sign Up", new_user_registration_path, class: "nav-link" %></li>
           <li class="nav-item"><%= link_to "Login", new_user_session_path, class: "nav-link" %></li>
-      
+        <% end %>
       </ul>
     </div>
   </div>
