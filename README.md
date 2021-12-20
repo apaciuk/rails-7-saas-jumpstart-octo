@@ -4,6 +4,10 @@ Epic Ruby On Rails 7 SaaS Jumpstart app with PostgreSQL, Bootstrap 5, Font Aweso
 
 # JS & CSS Bundling with Rollup - no webpack/webpacker
 
+# todo
+
+Fix nav dropdown glitch and alert close button
+
 https://stimulus.hotwired.dev/
 
 https://docs.stimulusreflex.com/
