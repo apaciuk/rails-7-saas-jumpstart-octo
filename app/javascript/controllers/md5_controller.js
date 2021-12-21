@@ -1,4 +1,5 @@
 import { Controller } from "@hotwired/stimulus"
+import md5 from 'md5'
 // md5 example
 export default class extends Controller {
     convert(event) {
