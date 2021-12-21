@@ -5,5 +5,6 @@ export default class extends Controller {
     convert(event) {
         event.preventDefault()
         event.target.textContent = md5(event.target.textContent)
+        console.log(md5('message'))
     }
 }
