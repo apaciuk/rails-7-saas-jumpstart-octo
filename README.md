@@ -40,19 +40,24 @@ copy .env.example > .env and enter details, or adapt to suit yours.
     (see https://realfavicongenerator.net/)  for more info.
 13. $ rails g rspec:install  (for testing)
 
-14. Run Importmap - examples 
+14. Run Importmap
+
+# examples 
 
  ./bin/importmap
  ./bin/importmap pin bootstrap  (pin bootstrap & popper, ie import)
  ./bin/importmap json (show maps)
 
 
-* Woot woot  Start server!
+# Woot woot  Start server!
 
 $ rails s
 
 (For other cmds see  related docs/links)
 
+# example
+
+$ rails action_text:install (already done here)
 
 
 * ...

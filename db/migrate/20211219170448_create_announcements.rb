@@ -12,6 +12,3 @@ class CreateAnnouncements < ActiveRecord::Migration[7.0] # rubocop:todo Style/Do
     end
   end
 end
-
-
-

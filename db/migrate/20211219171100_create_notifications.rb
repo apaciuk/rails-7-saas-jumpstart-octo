@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class CreateNotifications < ActiveRecord::Migration[7.0] # rubocop:todo Style/Documentation
-def change
+  def change
     create_table :notifications do |t|
       t.references :recipient, polymorphic: true, null: false
       t.string :type, null: false

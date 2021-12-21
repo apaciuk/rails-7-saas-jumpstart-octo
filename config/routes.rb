@@ -7,9 +7,9 @@ Rails.application.routes.draw do
   get '/privacy', to: 'home#privacy'
   get '/terms', to: 'home#terms'
   authenticate :user, ->(u) { u.admin? } do
-  mount Sidekiq::Web => '/sidekiq'
+    mount Sidekiq::Web => '/sidekiq'
 
-  namespace :madmin do
+    namespace :madmin do
     end
   end
 
@@ -18,4 +18,3 @@ Rails.application.routes.draw do
   devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }
   root to: 'home#index'
 end
-

@@ -15,5 +15,3 @@ class CreateFriendlyIdSlugs < ActiveRecord::Migration[7.0] # rubocop:todo Style/
               length: { slug: 70, sluggable_type: 50, scope: 70 }, unique: true
   end
 end
-
-
