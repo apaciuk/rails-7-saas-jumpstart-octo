@@ -20,24 +20,30 @@ Ruby 3.0.0
 
 Rails 7.0.0 up
 
-* Setup
+* Setup, first three commands MUST be run
 
 1. $ bundle install/update (if change any gems)
 2. $ yarn  (engine node v 16.0.0)
 3. $ rails css:install:bootstrap
+
 4. set db credentials config/database.yml (postgres)
 5. $ rails db:create
 6. $ rails db:migrate
+
 7. Is set up to send basic user signup mail with gmail, alter smtp or other mail credentials (.env, application_mailer, devise.rb & development.rb), then test signup confirmation emails by signing up & confirming user email
 copy .env.example > .env and enter details, or adapt to suit yours.
 
-8. $ rails stimulus_reflex:install (OPTIONAL, extra config needed))
+8. $ rails stimulus_reflex:install (OPTIONAL, extra config needed see link above)
 
 9. $ rails dev:cache (check, should be cached, if not run again)
+
+OPTIONAL
 10. $ rails g madmin:install  (if not, have to alter nav)
-11. $ rails g madmin:views  (overwrite)
+11. $ rails g madmin:views  (already there styled for bootstrap overwrite requires restyle)
+
 12. $ rails generate favicon  (put your favicon.png in assets/images, along with favicon.json in config folder)
     (see https://realfavicongenerator.net/)  for more info.
+    
 13. $ rails g rspec:install  (for testing)
 
 14. Run Importmap
