@@ -69,6 +69,8 @@ $ rails action_text:install (already done here)
 
 ### Multi Tenancy Support ###
 
+(When create new files or migrations run Rubocop to correct and add frozen_string_literal offenses)
+
 Add domain and subdomain to your tenant account table (Skip if your rails app already did this)
 
 rails generate multi_tenant_support:migration YOUR_TENANT_ACCOUNT_TABLE_OR_MODEL_NAME
