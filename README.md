@@ -4,13 +4,13 @@ Epic Ruby On Rails 7 SaaS Jumpstart app with PostgreSQL, Bootstrap 5, Font Aweso
 
 # JS & CSS Bundling with Rollup - no webpack/webpacker
 
-https://stimulus.hotwired.dev/
+* https://stimulus.hotwired.dev/
 
-https://docs.stimulusreflex.com/
+* https://docs.stimulusreflex.com/
 
 Combine with Hotwire and Strada
 
-https://hotwired.dev/
+* https://hotwired.dev/
 
 Style kept minimal so Bootstrap 5 can be swapped out for other CSS or UI if required
 
@@ -65,7 +65,9 @@ $ rails s
 
 $ rails action_text:install (already done here)
 
-# Multi Tenancy
+#################################################
+
+### Multi Tenancy Support ###
 
 Add domain and subdomain to your tenant account table (Skip if your rails app already did this)
 

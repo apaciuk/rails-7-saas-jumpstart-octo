@@ -164,7 +164,8 @@ GEM
     importmap-rails (1.0.1)
       actionpack (>= 6.0.0)
       railties (>= 6.0.0)
-    jbuilder (2.11.4)
+    jbuilder (2.11.5)
+      actionview (>= 5.0.0)
       activesupport (>= 5.0.0)
     jsbundling-rails (1.0.0)
       railties (>= 6.0.0)
@@ -431,4 +432,4 @@ RUBY VERSION
    ruby 3.0.0p0
 
 BUNDLED WITH
-   2.2.3
+   2.2.33

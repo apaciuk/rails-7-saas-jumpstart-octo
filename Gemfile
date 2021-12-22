@@ -17,9 +17,13 @@ gem 'pg', '~> 1.1'
 # Use the Puma web server [https://github.com/puma/puma]
 gem 'puma', '~> 5.0'
 
-# Use JavaScript with ESM import maps [https://github.com/rails/importmap-rails]
-gem 'importmap-rails'
+# Multi Tenant no data leak
+# gem 'multi-tenant-support'
 
+# Use JavaScript with ESM import maps, & bundling CSS [https://github.com/rails/importmap-rails]
+gem 'importmap-rails'
+gem 'cssbundling-rails', '~> 1.0'
+gem 'jsbundling-rails', '~> 1.0'
 # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
 gem 'turbo-rails'
 
@@ -102,6 +106,4 @@ group :test do
   gem 'webdrivers'
 end
 
-gem 'cssbundling-rails', '~> 1.0'
 
-gem 'jsbundling-rails', '~> 1.0'
