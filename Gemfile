@@ -17,7 +17,7 @@ gem 'pg', '~> 1.1'
 # Use the Puma web server [https://github.com/puma/puma]
 gem 'puma', '~> 5.0'
 
-# Multi Tenant no data leak
+# Multi Tenant no data leak (if enable extra config needed see Readme)
 # gem 'multi-tenant-support'
 
 # Use JavaScript with ESM import maps, & bundling CSS [https://github.com/rails/importmap-rails]
