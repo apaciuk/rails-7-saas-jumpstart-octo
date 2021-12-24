@@ -24,7 +24,7 @@ Rails 7.0.0 up
 
 1. $ bundle install/update (if change any gems)
 2. $ yarn  (engine node v 16.0.0)
-3. $ rails css:install:bootstrap
+3. $ rails css:install:bootstrap  (dont overwrite application.bootstrap)
 
 4. set db credentials config/database.yml (postgres)
 5. $ rails db:create
