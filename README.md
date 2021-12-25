@@ -1,6 +1,6 @@
 # rails 7 sass jumpstart
 
-Epic Ruby On Rails 7 SaaS Jumpstart app with PostgreSQL, Bootstrap 5, Font Awesome 5, Devise, Noticed, Announcements, Rollup, CSS Bundling, JS Bundling, Madmin, Hotwire, Stimulus JS and Action Cable/Cable Ready, Request JS with Redis Caching
+Epic Ruby On Rails 7 SaaS Jumpstart app with PostgreSQL, Redis Caching, Bootstrap 5, Font Awesome 5, Devise, Notifications, Announcements, Rollup, Importmap, CSS Bundling, JS Bundling, Madmin, Hotwire, Stimulus JS and Action Cable/Cable Ready & Request JS. 
 
 # JS & CSS Bundling with Rollup - no webpack/webpacker
 
