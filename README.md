@@ -20,24 +20,25 @@ Ruby 3.0.0
 
 Rails 7.0.0 up
 
-* Setup, first three commands MUST be run
+* Setup, first six steps MUST be done
 
 1. $ bundle install/update (if change any gems)
 2. $ yarn  (engine node v 16.0.0)
-3. $ rails css:install:bootstrap  (dont overwrite application.bootstrap)
+3. $ bin/rails css:install:bootstrap  (dont overwrite application.bootstrap)
 
-4. set db credentials config/database.yml (postgres)
-5. $ rails db:create
-6. $ rails db:migrate
+4. Set db credentials in .env file (for PostgreSQL, cp .env.example to .env)
+5. $ bin/rails db:create
+6. $ bin/rails db:schema:load
 
-7. Is set up to send basic user signup mail with gmail, alter smtp or other mail credentials (.env, application_mailer, devise.rb & development.rb), then test signup confirmation emails by signing up & confirming user email
-copy .env.example > .env and enter details, or adapt to suit yours.
+7. Is set up to send basic user signup mail with Gmail, alter smtp or other mail credentials (.env, application_mailer, devise.rb & development.rb), then test signup confirmation emails by signing up & confirming user email
+As above be sure to copy .env.example > .env and enter details, or adapt to suit yours.
 
-8. $ rails stimulus_reflex:install (OPTIONAL, extra config needed see link above)
+## Optional
+8. $ rails stimulus_reflex:install (extra config needed see link above)
 
 9. $ rails dev:cache (check, should be cached, if not run again)
 
-OPTIONAL
+## Optional
 10. $ rails g madmin:install  (if not, have to alter nav)
 11. $ rails g madmin:views  (already there styled for bootstrap overwrite requires restyle)
 
@@ -48,10 +49,10 @@ OPTIONAL
 
 14. Run Importmap
 
-# examples 
+# Examples 
 
  ./bin/importmap
- ./bin/importmap pin bootstrap  (pin bootstrap & popper, ie import)
+ ./bin/importmap pin bootstrap  (pin bootstrap & popper, ie import & set)
  ./bin/importmap json (show maps)
 
 
