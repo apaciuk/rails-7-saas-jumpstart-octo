@@ -34,14 +34,13 @@ gem 'turbo-rails'
 
 # Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
 gem 'stimulus-rails'
+gem 'cable_ready'
 
 # Nominal basic CSS framework & Icon fonts, can be swapped out.
 gem 'bootstrap', '5.1.3'
 gem 'font-awesome-sass', '~> 5.15'
 # IDs
 gem 'friendly_id', '~> 5.4'
-# Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
-gem 'cable_ready'
 
 # Use Active Storage variant
 gem 'image_processing'
