@@ -22,11 +22,13 @@ gem 'puma', '~> 5.0'
 
 # Http & cookies
 gem 'mechanize'
+
 # Use JavaScript with ESM import maps, & bundling CSS [https://github.com/rails/importmap-rails]
 gem 'importmap-rails'
-gem 'requestjs-rails'
+gem 'requestjs-rails' # Always after importmap
 gem 'cssbundling-rails', '~> 1.0'
 gem 'jsbundling-rails', '~> 1.0'
+
 # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
 gem 'turbo-rails'
 
@@ -43,7 +45,7 @@ gem 'cable_ready'
 
 # Use Active Storage variant
 gem 'image_processing'
-# Admin
+# Admin section
 gem 'madmin'
 # Compress Full name
 gem 'name_of_person', '~> 1.1'
