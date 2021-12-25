@@ -20,8 +20,11 @@ gem 'puma', '~> 5.0'
 # Multi Tenant no data leak (if enable extra config needed see Readme)
 # gem 'multi-tenant-support'
 
+# Http & cookies
+gem 'mechanize'
 # Use JavaScript with ESM import maps, & bundling CSS [https://github.com/rails/importmap-rails]
 gem 'importmap-rails'
+gem 'requestjs-rails'
 gem 'cssbundling-rails', '~> 1.0'
 gem 'jsbundling-rails', '~> 1.0'
 # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
