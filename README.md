@@ -55,8 +55,7 @@ As above be sure to copy .env.example > .env and enter details, or adapt to suit
  ./bin/importmap pin bootstrap  (pin bootstrap & popper, ie import & set)
  ./bin/importmap json (show maps)
 
-
-# Woot woot  Start server!
+## Start server! ##
 
 $ rails s
 
@@ -65,6 +64,10 @@ $ rails s
 # example
 
 $ rails action_text:install (already done here)
+
+## Author
+
+Paul Anthony McGowan - xhostcom@gmail.com
 
 #################################################
 
