@@ -20,34 +20,33 @@ Ruby 3.0.0
 
 Rails 7.0.0 up
 
-* Setup, first six steps MUST be done
+* Setup, first six steps MUST be done, after set email & db credentials in .env file (for PostgreSQL, cp .env.example to .env and fill in with your env details)
 
 1. $ bundle install/update (if change any gems)
 2. $ yarn  (engine node v 16.0.0)
 3. $ bin/rails css:install:bootstrap  (dont overwrite application.bootstrap)
 
-4. Set db credentials in .env file (for PostgreSQL, cp .env.example to .env)
-5. $ bin/rails db:create
-6. $ bin/rails db:schema:load
+4. $ bin/rails db:setup
 
-7. Is set up to send basic user signup mail with Gmail, alter smtp or other mail credentials (.env, application_mailer, devise.rb & development.rb), then test signup confirmation emails by signing up & confirming user email
+5. Is set up to send basic user signup mail with Gmail, alter smtp or other mail credentials (.env, application_mailer, devise.rb & development.rb), then test signup confirmation emails by signing up & confirming user email
 As above be sure to copy .env.example > .env and enter details, or adapt to suit yours.
 
-## Optional
-8. $ rails stimulus_reflex:install (extra config needed see link above)
-
-9. $ rails dev:cache (check, should be cached, if not run again)
+6. $ rails dev:cache (check/toggle, must be cached, if not run again)
 
 ## Optional
-10. $ rails g madmin:install  (if not, have to alter nav)
-11. $ rails g madmin:views  (already there styled for bootstrap overwrite requires restyle)
 
-12. $ rails generate favicon  (put your favicon.png in assets/images, along with favicon.json in config folder)
+7. $ rails stimulus_reflex:install (extra config needed see link above)
+
+# Optional
+8. $ rails g madmin:install  (if not, have to alter nav)
+9. $ rails g madmin:views  (already there styled for bootstrap overwrite requires restyle)
+
+10. $ rails generate favicon  (put your favicon.png in assets/images, along with favicon.json in config folder)
     (see https://realfavicongenerator.net/)  for more info.
     
-13. $ rails g rspec:install  (for testing)
+11. $ rails g rspec:install  (for testing)
 
-14. Run Importmap
+12. Run Importmap
 
 # Examples 
 
