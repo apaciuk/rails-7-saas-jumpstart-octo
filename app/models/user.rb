@@ -6,7 +6,7 @@ class User < ApplicationRecord
   # Validations
   validates :email, presence: true
   validates :email, uniqueness: true
-  validates :username, presence: true
+  # validates :username, presence: true
   has_one_attached :avatar
   has_person_name
 
