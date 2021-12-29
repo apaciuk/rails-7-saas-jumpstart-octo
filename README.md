@@ -1,6 +1,6 @@
-# rails 7 sass jumpstart
+# rails 7 sass jumpstart octo
 
-Epic Ruby On Rails 7 SaaS Jumpstart app with PostgreSQL, Redis Caching, Bootstrap 5, Font Awesome 5, Devise, Notifications, Announcements, Rollup, Importmap, CSS Bundling, JS Bundling, Madmin, Hotwire, Stimulus JS and Action Cable/Cable Ready & Request JS. 
+Epic Ruby On Rails 7 SaaS Jumpstart Dark Themed template with PostgreSQL, Redis Caching, Bootstrap 5, Font Awesome 5, Devise, Notifications, Announcements, Rollup, Importmap, CSS Bundling, JS Bundling, Madmin, Hotwire, Stimulus JS and Action Cable/Cable Ready & Request JS. 
 
 # JS & CSS Bundling with Rollup - no webpack/webpacker
 
@@ -63,6 +63,11 @@ $ rails s
 # example
 
 $ rails action_text:install (already done here)
+
+## Sass correction (fix sass warning in step 3)
+
+$ npm install -g sass-migrator
+$ sass-migrator division **/*.scss
 
 ## Author
 
