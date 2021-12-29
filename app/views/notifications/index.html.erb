@@ -1,10 +1,30 @@
+<div class="row mt-4">
 <h1>Notifications</h1>
 
-<ul>
-  <% @notifications.each do |notification| %>
-    <%# Customize your notification format here. We typically recommend a `message` and `url` method on the Notification classes. %>
-    <%#= link_to notification.message, notification.url %>
+<div class="card">
+  <div class="card-body">
+    <% @notifications.each_with_index do |notification, index| %>
+      <% if index != 0 %>
+        <div class="row"><div class="col"><hr /></div></div>
+      <% end %>
 
-    <li><%= notification.params %></li>
-  <% end %>
-</ul>
+      <div class="row notification" id="<%= dom_id(notification) %>">
+        <div class="col-sm-1 text-center">
+        <ul>
+          <%= link_to notification.message, notification.url(anchor: dom_id(notification)) do %>
+          <li><%= notification.params %></li>
+          <% end %>
+        </ul>
+        </div>
+        <div class="col">
+        <% if @announcements.empty? %>
+        <div>Notifications coming very soon!</div>
+        <% end %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
+</div>
+
+
