@@ -8,7 +8,7 @@ Epic Ruby On Rails 7 SaaS Jumpstart app with PostgreSQL, Redis Caching, Bootstra
 
 * https://docs.stimulusreflex.com/
 
-Combine with Hotwire and Strada
+Combine with Hotwire and Strada &others.
 
 * https://hotwired.dev/
 
@@ -26,7 +26,7 @@ Rails 7.0.0 up
 2. $ yarn  (engine node v 16.0.0)
 3. $ bin/rails css:install:bootstrap  (dont overwrite application.bootstrap)
 
-4. $ bin/rails db:setup
+4. $ bin/rails db:migrate:reset
 
 5. Is set up to send basic user signup mail with Gmail, alter smtp or other mail credentials (.env, application_mailer, devise.rb & development.rb), then test signup confirmation emails by signing up & confirming user email
 As above be sure to copy .env.example > .env and enter details, or adapt to suit yours.
