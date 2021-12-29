@@ -8,19 +8,22 @@ Epic Ruby On Rails 7 SaaS Jumpstart Dark Themed template with PostgreSQL, Redis 
 
 * https://docs.stimulusreflex.com/
 
-Combine with Hotwire and Strada &others.
+# Combine with Hotwire and Strada & others #
 
 * https://hotwired.dev/
 
 Style kept minimal so Bootstrap 5 can be swapped out for other CSS or UI if required
 
-* Ruby version
+* Ruby/Rails/Node/Postgres
 
-Ruby 3.0.0
+- [Ruby](https://www.ruby-lang.org/en/) 3.0.0
+- [Rails](https://rubyonrails.org/) 7.0.0 up
+- [NodeJS] (https://nodejs.org/es/blog/release/v16.0.0/) 16.0.0
+- [PostgreSQL](https://www.postgresql.org/docs/14/index.html) 14.00
 
-Rails 7.0.0 up
+## SET UP, first six steps MUST be done ##
 
-* Setup, first six steps MUST be done, after set email & db credentials in .env file (for PostgreSQL, cp .env.example to .env and fill in with your env details)
+After first set email & db credentials in .env file (for PostgreSQL, cp .env.example to .env and fill in with your env details)
 
 1. $ bundle install/update (if change any gems)
 2. $ yarn  (engine node v 16.0.0)
@@ -72,6 +75,8 @@ $ sass-migrator division **/*.scss
 ## Author
 
 Paul Anthony McGowan - xhostcom@gmail.com
+
+https://www.patreon.com/xhostcom
 
 #################################################
 
