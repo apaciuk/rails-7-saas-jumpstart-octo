@@ -1,30 +1,30 @@
 <div class="row mt-4">
-<h1>Notifications</h1>
+  <h1>Notifications</h1>
 
-<div class="card">
-  <div class="card-body">
-    <% @notifications.each_with_index do |notification, index| %>
-      <% if index != 0 %>
-        <div class="row"><div class="col"><hr /></div></div>
+  <div class="card">
+    <div class="card-body">
+      <% @notifications.each do |notification| %>
+          <div class="row"><div class="col"><hr /></div></div>
+
+
+        <div class="row notification" id="<%= dom_id(notification) %>">
+          <div class="col-sm-1 text-center">
+            <%= link_to notifications_path(anchor: dom_id(notification)) do %>
+              <strong><%= notification.published_at.strftime("%b %d") %></strong>
+            <% end %>
+          </div>
+          <div class="col">
+            <strong class="<%= notification_class(notification.notification_type) %>"><%= notification.notification_type.titleize %>:</strong>
+            <strong><%= notification.name %></strong>
+            <%= simple_format notification.description %>
+          </div>
+        </div>
       <% end %>
 
-      <div class="row notification" id="<%= dom_id(notification) %>">
-        <div class="col-sm-1 text-center">
-        <ul>
-          <%= link_to notification.message, notification.url(anchor: dom_id(notification)) do %>
-          <li><%= notification.params %></li>
-          <% end %>
-        </ul>
-        </div>
-        <div class="col">
-        <% if @notifications.empty? %>
-        <div>Notifications coming very soon!</div>
-        <% end %>
-        </div>
-      </div>
-    <% end %>
+      <% if @notifications.empty? %>
+        <div>Exciting stuff coming very soon!</div>
+      <% end %>
+    </div>
   </div>
 </div>
-</div>
-
 
