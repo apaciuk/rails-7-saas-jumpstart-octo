@@ -24,17 +24,17 @@ gem 'puma', '~> 5.0'
 gem 'mechanize'
 
 # Use JavaScript with ESM import maps, & bundling CSS [https://github.com/rails/importmap-rails]
-gem 'importmap-rails'
-gem 'requestjs-rails' # Always after importmap
 gem 'cssbundling-rails', '~> 1.0'
+gem 'importmap-rails'
 gem 'jsbundling-rails', '~> 1.0'
+gem 'requestjs-rails' # Always after importmap
 
 # Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
 gem 'turbo-rails'
 
 # Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
-gem 'stimulus-rails'
 gem 'cable_ready'
+gem 'stimulus-rails'
 
 # Nominal basic CSS framework & Icon fonts, can be swapped out.
 gem 'bootstrap', '5.1.3'
@@ -109,5 +109,3 @@ group :test do
   gem 'selenium-webdriver'
   gem 'webdrivers'
 end
-
-
