@@ -1,12 +1,28 @@
-
-<div class="center jumbotron mt-5 mb-5">
+<div class="center jumbotron mt-4 mb-4">
   <div class="container">
     <div class="center">
-      <h1 class="mt-3">Welcome to Rails 7 SaaS Octo!</h1>
-      <p class="lead">Fast Rails 7 App Starter Kit!
-       </p>
-  <p>Built with latest Rails 7, PostgreSQL, Redis Caching, Bootstrap 5, Font Awesome 5, Devise Auth, Email Sends, User Avatars, Notifications, Announcements, <br /> Rollup, Importmap, CSS Bundling, JS Bundling, Madmin, Turbo, Stimulus JS, Hotwire, GLightbox and Action Cable/Cable Ready<br /> Request JS, Rubocop, Rspec & Multi Tenancy Support!</p>
-     <%= link_to image_tag('rails.webp', :size => '1000x400') %>
-    </div>
+     <h1 class="display-6">
+          <span class="display-6--intro">Fast Rails 7 App Starter Kit!</span></h1>
+             <p class="lead">
+           Built with latest Rails 7, PostgreSQL, Redis Caching, Bootstrap 5, Font Awesome 5, Devise Auth, Email Sends, User Avatars, Notifications, Announcements,  Rollup, Importmap, CSS Bundling, JS Bundling, Madmin, Turbo, Stimulus JS, Hotwire, GLightbox <br /> and Action Cable/Cable Ready, Request JS, Rubocop, Rspec & Multi Tenancy Support!
+          </p>
+     </div>
    </div>
 </div>
+<section id="home" class="intro-section">
+  <div class="container">
+    <div class="row align-items-center text-dark">
+      <!-- START THE CONTENT FOR THE INTRO  -->
+      <div class="col-md-6 intros text-left">
+       <%= link_to image_tag('rails.webp', class: "img-fluid", alt: "Hotwire", :size => '542x337') %>
+          <%= link_to "Get In Touch!", new_user_registration_path, class: "btn btn-outline-dark btn-rounded btn-lg mt-5" %>
+     </div>
+    
+      <div class="col-md-6 intros text-right">
+        <div class="container">
+        <%= link_to image_tag('intro.png'), root_path, class: "img-fluid", alt: "Illustration" %>
+       </div>
+      </div>
+    </div>
+  </div>
+ </section>
