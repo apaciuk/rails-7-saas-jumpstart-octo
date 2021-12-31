@@ -41,15 +41,13 @@ As above be sure to copy .env.example > .env and enter details, or adapt to suit
 7. $ rails stimulus_reflex:install (extra config needed see link above)
 
 # Optional
-8. $ rails g madmin:install  (if not, have to alter nav)
-9. $ rails g madmin:views  (already there styled for bootstrap overwrite requires restyle)
 
-10. $ rails generate favicon  (put your favicon.png in assets/images, along with favicon.json in config folder)
+8. $ rails generate favicon  (put your favicon.png in assets/images, along with favicon.json in config folder)
     (see https://realfavicongenerator.net/)  for more info.
     
-11. $ rails g rspec:install  (for testing)
+9. $ rails g rspec:install  (for testing)
 
-12. Run Importmap
+10. Run Importmap
 
 # Examples 
 
