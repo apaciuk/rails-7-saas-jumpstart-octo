@@ -9,7 +9,10 @@ Rails.application.routes.draw do
   authenticate :user, ->(u) { u.admin? } do
     mount Sidekiq::Web => '/sidekiq'
 
-    namespace :madmin do
+  namespace :madmin do
+    resources :impersonates do
+      post :impersonate, on: :member
+      post :stop_impersonating, on: :collection
     end
   end
 

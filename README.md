@@ -29,6 +29,11 @@ After first set email & db credentials in .env file (for PostgreSQL, cp .env.exa
 2. $ yarn  (engine node v 16.0.0)
 3. $ bin/rails css:install:bootstrap  (dont overwrite application.bootstrap)
 
+* Sass correction (fix sass warning from step above)
+
+$ npm install -g sass-migrator
+$ sass-migrator division **/*.scss
+
 4. $ bin/rails db:migrate:reset
 
 5. Is set up to send basic user signup mail with Gmail, alter smtp or other mail credentials (.env, application_mailer, devise.rb & development.rb), then test signup confirmation emails by signing up & confirming user email
@@ -61,14 +66,11 @@ $ rails s
 
 (For other cmds see  related docs/links)
 
-# example
+# Examples
 
 $ rails action_text:install (already done here)
 
-## Sass correction (fix sass warning in step 3)
-
-$ npm install -g sass-migrator
-$ sass-migrator division **/*.scss
+$ $ yarn build:css --watch (separate terminal watch changes in styles)
 
 ## Author
 
@@ -78,7 +80,7 @@ https://www.patreon.com/xhostcom
 
 ## Todo
 
-Fix madmin area glitch
+Fix madmin area glitch & create new item for model
 
 #################################################
 
