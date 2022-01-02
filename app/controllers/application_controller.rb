@@ -11,7 +11,7 @@ class ApplicationController < ActionController::Base # rubocop:todo Style/Docume
   protected
 
   def configure_permitted_parameters
-    devise_parameter_sanitizer.permit(:sign_up, keys: [:name])
+    devise_parameter_sanitizer.permit(:sign_up, keys: %i[name username])
     devise_parameter_sanitizer.permit(:account_update, keys: %i[name avatar])
   end
 end

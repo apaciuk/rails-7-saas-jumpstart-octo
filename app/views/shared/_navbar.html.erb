@@ -1,7 +1,7 @@
 <% if user_masquerade? %>
   <div class="alert alert-warning text-center">
     You're logged in as <b><%= current_user.name %> (<%= current_user.email %>)</b>
-    <%= link_to back_masquerade_path(current_user) do %><%= icon("fas", "times") %> Logout <% end %>
+    <%= link_to back_masquerade_path(current_user) do %><%= icon("bi", "bi-x-circle") %> Logout <% end %> 
   </div>
 <% end %>
 
@@ -22,7 +22,7 @@
 
         <li class="nav-item">
           <%= link_to notifications_path, class: "nav-link" do %>
-            <span><i class="fas fa-bell" aria-hidden="true"></i></span>
+            <span><i class="bi bi-bell-fill"></i></span>
           <% end %>
          </li>
 
@@ -32,9 +32,9 @@
             <% end %>
             <div id="nav-account-dropdown" class="dropdown-menu dropdown-menu-end" aria-labelledby="navbar-dropdown">
               <%= link_to "Settings", edit_user_registration_path, class: "dropdown-item btn btn-default btn-sm" %>
-              <% if current_user.admin? && respond_to?(:madmin_root_path) %>
+              <% if current_user.admin? %>
                 <div class="dropdown-divider"></div>
-                <%= link_to "Admin Area", madmin_root_path, class: "dropdown-item btn btn-default btn-sm" %>
+                <%= link_to "Admin Area", admin_root_path, class: "dropdown-item btn btn-default btn-sm" %>
               <% end %>
               <div class="dropdown-divider"></div>
               <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "dropdown-item btn btn-default btn-sm" %>

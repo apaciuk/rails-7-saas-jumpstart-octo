@@ -5,8 +5,8 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.0.0'
 
-# Bundle edge Rails instead: gem "rails", github: "rails/rails", branch: "main"
-gem 'rails', '~> 7.0.0'
+# Use specific branch of Rails
+gem 'rails', github: 'rails/rails', branch: '7-0-stable'
 
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem 'sprockets-rails'
@@ -17,8 +17,8 @@ gem 'pg', '~> 1.1'
 # Use the Puma web server [https://github.com/puma/puma]
 gem 'puma', '~> 5.0'
 
-# View Components
-gem "view_component"
+# View Components/Partials
+gem 'view_component'
 
 # Multi Tenant no data leak (if enable extra config needed see Readme)
 # gem 'multi-tenant-support'
@@ -39,36 +39,47 @@ gem 'turbo-rails'
 gem 'cable_ready'
 gem 'stimulus-rails'
 
-# Nominal basic CSS framework & Icon fonts, can be swapped out.
+# Nominal basic CSS framework can be swapped out.
 gem 'bootstrap', '5.1.3'
-gem 'font-awesome-sass', '~> 5.15'
+gem 'font-awesome-rails'
+
 # IDs
 gem 'friendly_id', '~> 5.4'
 
-# Use Active Storage variant
-gem 'image_processing'
+# Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
+gem 'image_processing', '~> 1.2'
+
 # Admin section
-gem 'madmin'
+gem 'administrate', github: 'excid3/administrate', branch: 'jumpstart'
+
 # Compress Full name
 gem 'name_of_person', '~> 1.1'
+
 # Notifications
 gem 'noticed', '~> 1.2'
+
 # Social Media Auth
 gem 'omniauth-facebook', '~> 8.0'
 gem 'omniauth-github', '~> 2.0'
 gem 'omniauth-twitter', '~> 1.4'
+
 # Auth, Logins, Tokens
 gem 'devise', git: 'https://github.com/heartcombo/devise', branch: 'main'
 gem 'devise_masquerade', '~> 1.3'
+
 # Auth Roles w Devise
 gem 'pundit', '~> 2.1'
+
 # Processes
 gem 'sidekiq', '~> 6.2'
+
 # Sitemap
 gem 'sitemap_generator', '~> 6.1'
 gem 'whenever', require: false
+
 # Env variables
 gem 'dotenv-rails', '~> 2.7'
+
 # Favicon
 gem 'rails_real_favicon', '~> 0.1.1'
 
@@ -81,6 +92,12 @@ gem 'redis', '~> 4.0'
 # Use Kredis to get higher-level data types in Redis [https://github.com/rails/kredis]
 # gem "kredis"
 
+# Use Active Model has_secure_password [https://guides.rubyonrails.org/active_model_basics.html#securepassword]
+# gem "bcrypt", "~> 3.1.7"
+
+# Windows does not include zoneinfo files, so bundle the tzinfo-data gem
+gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
+
 # Reduces boot times through caching; required in config/boot.rb
 gem 'bootsnap', require: false
 
@@ -88,6 +105,8 @@ gem 'bootsnap', require: false
 gem 'sassc-rails'
 
 group :development, :test do
+  # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
+  gem 'debug', platforms: %i[mri mingw x64_mingw]
   gem 'rspec-rails', '~> 5.0'
   gem 'rubocop', '~> 1.23', require: false
   gem 'rubocop-performance', '~> 1.11.0', require: false
@@ -101,9 +120,6 @@ group :development do
 
   # Add speed badges [https://github.com/MiniProfiler/rack-mini-profiler]
   # gem "rack-mini-profiler"
-
-  # Speed up commands on slow machines / big apps [https://github.com/rails/spring]
-  # gem "spring"
 end
 
 group :test do

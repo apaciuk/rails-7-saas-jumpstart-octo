@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
-class CreateActiveStorageTables < ActiveRecord::Migration[7.0]
-  def change # rubocop:todo Metrics/AbcSize, Metrics/MethodLength
+class CreateActiveStorageTables < ActiveRecord::Migration[7.0] # rubocop:todo Style/Documentation
+  def change # rubocop:todo Metrics/MethodLength
     create_table :active_storage_blobs do |t|
       t.string   :key,          null: false
       t.string   :filename,     null: false

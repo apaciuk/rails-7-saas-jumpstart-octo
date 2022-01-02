@@ -1,6 +1,6 @@
 # rails 7 sass jumpstart octo
 
-Epic Ruby On Rails 7 SaaS Jumpstart Dark Themed template with PostgreSQL, Redis Caching, Bootstrap 5, Font Awesome 5, Devise, Notifications, Announcements, Rollup, Importmap, CSS Bundling, JS Bundling, Madmin, Hotwire, Stimulus JS GLightbox and Action Cable/Cable Ready & Request JS. 
+Epic Ruby On Rails 7 SaaS Jumpstart Dark Themed template with PostgreSQL, Redis Caching, Bootstrap 5, Font Awesome 5, Devise, Notifications, Announcements, Rollup, Importmap, CSS Bundling, JS Bundling, Administrate, Hotwire, Stimulus JS GLightbox and Action Cable/Cable Ready & Request JS. 
 
 # JS & CSS Bundling with Rollup - no webpack/webpacker
 
@@ -12,7 +12,7 @@ Epic Ruby On Rails 7 SaaS Jumpstart Dark Themed template with PostgreSQL, Redis 
 
 * https://hotwired.dev/
 
-Style kept minimal so Bootstrap 5 can be swapped out for other CSS or UI if required
+Style kept minimal so Bootstrap 5 can be swapped out for other CSS or UI if required, Bootstrap icons via CDN, docs reference at ./vendor/index.html, dummy fonts in root of app (not used)
 
 * Ruby/Rails/Node/Postgres
 
@@ -54,7 +54,7 @@ As above be sure to copy .env.example > .env and enter details, or adapt to suit
 
 10. Run Importmap
 
-# Examples 
+# Importmap Examples 
 
  ./bin/importmap
  ./bin/importmap pin bootstrap  (pin bootstrap & popper, ie import & set)
@@ -70,7 +70,9 @@ $ rails s
 
 $ rails action_text:install (already done here)
 
-$ $ yarn build:css --watch (separate terminal watch changes in styles)
+# Live reload/watch CSS
+
+$ $ yarn build:css --watch (separate terminal watch/update changes in styles)
 
 ## Author
 
@@ -80,7 +82,6 @@ https://www.patreon.com/xhostcom
 
 ## Todo
 
-Fix madmin area glitch & create new item for model
 
 #################################################
 
