@@ -70,6 +70,8 @@ $ rails s
 
 $ rails action_text:install (already done here)
 
+$ rails generate administrate:install (if use Administrate)
+
 # Live reload/watch CSS
 
 $ $ yarn build:css --watch (separate terminal watch/update changes in styles)
