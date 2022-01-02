@@ -38,6 +38,7 @@ gem 'turbo-rails'
 # Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
 gem 'cable_ready'
 gem 'stimulus-rails'
+gem 'hotwire-rails'
 
 # Nominal basic CSS framework can be swapped out.
 gem 'bootstrap', '5.1.3'
