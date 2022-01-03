@@ -21,7 +21,7 @@ Style kept minimal so Bootstrap 5 can be swapped out for other CSS or UI if requ
 - [NodeJS] (https://nodejs.org/es/blog/release/v16.0.0/) 16.0.0
 - [PostgreSQL](https://www.postgresql.org/docs/14/index.html) 14.00
 
-## SET UP, first six steps MUST be done ##
+## SET UP ##
 
 After first set email & db credentials in .env file (for PostgreSQL, cp .env.example to .env and fill in with your env details)
 
@@ -34,25 +34,27 @@ After first set email & db credentials in .env file (for PostgreSQL, cp .env.exa
 $ npm install -g sass-migrator
 $ sass-migrator division **/*.scss
 
-4. $ bin/rails db:migrate:reset
+4. $ rails hotwire:install
 
-5. Is set up to send basic user signup mail with Gmail, alter smtp or other mail credentials (.env, application_mailer, devise.rb & development.rb), then test signup confirmation emails by signing up & confirming user email
+5. $ bin/rails db:migrate:reset
+
+6. Is set up to send basic user signup mail with Gmail, alter smtp or other mail credentials (.env, application_mailer, devise.rb & development.rb), then test signup confirmation emails by signing up & confirming user email
 As above be sure to copy .env.example > .env and enter details, or adapt to suit yours.
 
-6. $ rails dev:cache (check/toggle, must be cached, if not run again)
+7. $ rails dev:cache (check/toggle, must be cached, if not run again)
 
 ## Optional
 
-7. $ rails stimulus_reflex:install (extra config needed see link above)
+8. $ rails stimulus_reflex:install (extra config needed see link above)
 
 # Optional
 
-8. $ rails generate favicon  (put your favicon.png in assets/images, along with favicon.json in config folder)
+9. $ rails generate favicon  (put your favicon.png in assets/images, along with favicon.json in config folder)
     (see https://realfavicongenerator.net/)  for more info.
     
-9. $ rails g rspec:install  (for testing)
+10. $ rails g rspec:install  (for testing)
 
-10. Run Importmap
+11. Run Importmap
 
 # Importmap Examples 
 
