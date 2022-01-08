@@ -49,6 +49,7 @@ gem 'friendly_id', '~> 5.4'
 
 # Service Objects
 gem 'light-services', '~> 0.6.3'
+gem 'rails-patterns'
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 gem 'image_processing', '~> 1.2'
