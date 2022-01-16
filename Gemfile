@@ -112,6 +112,7 @@ gem 'sassc-rails'
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem 'debug', platforms: %i[mri mingw x64_mingw]
+  gem 'faker', '~> 2.19'
   gem 'factory_bot_rails'
   gem 'rspec-rails', '~> 5.0'
   gem 'rubocop', '~> 1.23', require: false
