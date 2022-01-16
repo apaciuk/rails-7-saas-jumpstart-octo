@@ -181,6 +181,11 @@ GEM
       railties (>= 3.2)
     erubi (1.10.0)
     execjs (2.8.1)
+    factory_bot (6.2.0)
+      activesupport (>= 5.0.0)
+    factory_bot_rails (6.2.0)
+      factory_bot (~> 6.2.0)
+      railties (>= 5.0.0)
     faraday (1.9.3)
       faraday-em_http (~> 1.0)
       faraday-em_synchrony (~> 1.0)
@@ -449,6 +454,8 @@ GEM
       childprocess (>= 0.5, < 5.0)
       rexml (~> 3.2, >= 3.2.5)
       rubyzip (>= 1.2.2)
+    shoulda-matchers (5.1.0)
+      activesupport (>= 5.2.0)
     sidekiq (6.3.1)
       connection_pool (>= 2.2.2)
       rack (~> 2.0)
@@ -522,6 +529,7 @@ DEPENDENCIES
   devise!
   devise_masquerade (~> 1.3)
   dotenv-rails (~> 2.7)
+  factory_bot_rails
   font-awesome-rails
   friendly_id (~> 5.4)
   hotwire-rails
@@ -551,6 +559,7 @@ DEPENDENCIES
   rubocop-rspec (~> 2.6)
   sassc-rails
   selenium-webdriver
+  shoulda-matchers (~> 5.1)
   sidekiq (~> 6.2)
   sitemap_generator (~> 6.1)
   sprockets-rails
