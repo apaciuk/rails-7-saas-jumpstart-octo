@@ -29,10 +29,7 @@ After first set email & db credentials in .env file (for PostgreSQL, cp .env.exa
 2. $ yarn  (engine node v 16.0.0)
 3. $ bin/rails css:install:bootstrap  (dont overwrite application.bootstrap)
 
-* Sass correction (fix sass warning from step above)
-
-$ npm install -g sass-migrator
-$ sass-migrator division **/*.scss
+* Hotwire
 
 4. $ rails hotwire:install
 
@@ -53,6 +50,8 @@ As above be sure to copy .env.example > .env and enter details, or adapt to suit
     (see https://realfavicongenerator.net/)  for more info.
     
 10. $ rails g rspec:install  (for testing)
+
+(for test db run $ rails db:test:prepare)
 
 11. Run Importmap
 
