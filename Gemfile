@@ -37,8 +37,8 @@ gem 'turbo-rails'
 
 # Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
 gem 'cable_ready'
-gem 'stimulus-rails'
 gem 'hotwire-rails'
+gem 'stimulus-rails'
 
 # Nominal basic CSS framework can be swapped out.
 gem 'bootstrap', '5.1.3'
@@ -53,7 +53,7 @@ gem 'rails-patterns'
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 gem 'image_processing', '~> 1.2'
-gem "paperclip", git: "git://github.com/thoughtbot/paperclip.git"
+gem 'paperclip', git: 'git://github.com/thoughtbot/paperclip.git'
 
 # Admin section
 gem 'administrate', github: 'excid3/administrate', branch: 'jumpstart'
@@ -113,8 +113,8 @@ gem 'sassc-rails'
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   gem 'debug', platforms: %i[mri mingw x64_mingw]
-  gem 'faker', '~> 2.19'
   gem 'factory_bot_rails'
+  gem 'faker', '~> 2.19'
   gem 'rspec-rails', '~> 5.0'
   gem 'rubocop', '~> 1.23', require: false
   gem 'rubocop-performance', '~> 1.11.0', require: false
@@ -129,8 +129,8 @@ end
 
 group :test do
   # Use system testing [https://guides.rubyonrails.org/testing.html#system-testing]
-  gem 'shoulda-matchers', '~> 5.1'
   gem 'capybara'
   gem 'selenium-webdriver'
+  gem 'shoulda-matchers', '~> 5.1'
   gem 'webdrivers'
 end
