@@ -88,6 +88,8 @@ https://www.patreon.com/xhostcom
 
 #################################################
 
+### Yeet DBA, fix db constraint errors see link in Gemfile ###
+
 ### Multi Tenancy Support ###
 
 (When create new files or migrations run Rubocop to correct and add frozen_string_literal offenses)
