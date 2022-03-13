@@ -11,8 +11,9 @@ gem 'rails', github: 'rails/rails', branch: '7-0-stable'
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem 'sprockets-rails'
 
-# Use postgresql as the database for Active Record
+# Use postgresql as the database for Active Record, & yeet_dba for DB constraint errors, [https://github.com/kevincolemaninc/yeet_dba]
 gem 'pg', '~> 1.2'
+gem 'yeet_dba'  
 
 # Use the Puma web server [https://github.com/puma/puma]
 gem 'puma', '~> 5.0'
