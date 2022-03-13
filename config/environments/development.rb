@@ -11,19 +11,19 @@ Rails.application.configure do
   config.cache_classes = false
   config.session_store :cache_store
 
-  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+  config.action_mailer.default_url_options = { host: 'localhost',  }
 
   config.action_mailer.delivery_method = :smtp
 
-  ActionMailer::Base.smtp_settings = {
-    address: 'smtp.gmail.com',
-    port: 587,
-    domain: 'gmail.com',
-    user_name: ENV['SMTP_USER_NAME'],
-    password: ENV['SMTP_PASSWORD'],
-    authentication: 'plain',
-    enable_starttls_auto: true
-  }
+  #ActionMailer::Base.smtp_settings = {
+  #  address: 'smtp.gmail.com',
+   # port: 587,
+   # domain: 'gmail.com',
+   # user_name: ENV['SMTP_USER_NAME'],
+   # password: ENV['SMTP_PASSWORD'],
+  #  authentication: 'plain',
+   # enable_starttls_auto: true
+  #}
 
   # Do not eager load code on boot.
   config.eager_load = false
