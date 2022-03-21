@@ -15,6 +15,9 @@ gem 'sprockets-rails'
 gem 'pg', '~> 1.2'
 # gem 'yeet_dba'
 
+# Audit the Bundle  [https://www.rubydoc.info/gems/bundle-audit/0.1.0]  bundle audit --update bundle audit
+gem 'bundle-audit'
+
 # Use the Puma web server [https://github.com/puma/puma]
 gem 'puma', '~> 5.0'
 
@@ -54,7 +57,6 @@ gem 'rails-patterns'
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 gem 'image_processing', '~> 1.2'
-gem 'paperclip', git: 'git://github.com/thoughtbot/paperclip.git'
 
 # Admin section
 gem 'administrate', github: 'excid3/administrate', branch: 'jumpstart'
