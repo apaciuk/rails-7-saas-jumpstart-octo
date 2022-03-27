@@ -51,9 +51,6 @@ gem 'font-awesome-rails'
 # IDs
 gem 'friendly_id', '~> 5.4'
 
-# Roles, (ie Author, Editor, Instructor, Curator etc) [https://www.rubydoc.info/gems/simple_roles/0.0.12]
-
-
 # Service Objects
 gem 'light-services', '~> 0.6.3'
 gem 'rails-patterns'
@@ -79,8 +76,9 @@ gem 'omniauth-twitter', '~> 1.4'
 gem 'devise', git: 'https://github.com/heartcombo/devise', branch: 'main'
 gem 'devise_masquerade', '~> 1.3'
 
-# Auth Roles w Devise
+# Auth Roles,(ie Author, Editor, Instructor, Curator etc) [https://www.rubydoc.info/gems/pundit_roles/0.6.0]
 gem 'pundit', '~> 2.1'
+gem 'pundit_roles'
 
 # Processes
 gem 'sidekiq', '~> 6.2'
