@@ -1,7 +1,7 @@
 # frozen_string_literal: true
 
 class ApplicationController < ActionController::Base # rubocop:todo Style/Documentation
-  # include Pundit
+  include Pundit::Authorization
 
   protect_from_forgery with: :exception
 
