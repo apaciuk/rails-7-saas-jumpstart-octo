@@ -10,7 +10,7 @@ class User < ApplicationRecord
   has_one_attached :avatar
   has_person_name
   # Roles
- 
+
   # Notifications & Services
   has_many :notifications, as: :recipient
   has_many :services
