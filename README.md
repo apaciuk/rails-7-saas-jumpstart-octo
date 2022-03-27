@@ -1,6 +1,6 @@
 # rails 7 sass jumpstart octo
 
-Epic Ruby On Rails 7 SaaS Jumpstart Light Themed template with PostgreSQL, Redis Caching, Bootstrap 5, Font Awesome 5, Devise, Notifications, Announcements, Rollup, Importmap, CSS Bundling, JS Bundling, Administrate, Hotwire, Stimulus JS GLightbox and Action Cable/Cable Ready & Request JS. 
+Epic Ruby On Rails 7 SaaS Jumpstart Dark Themed template with PostgreSQL, Redis Caching, Bootstrap 5, Font Awesome 5, Devise, Notifications, Announcements, Rollup, Importmap, CSS Bundling, JS Bundling, Administrate, Hotwire, Stimulus and Action Cable/Cable Ready & Request JS. (Strada coming soon) 
 
 # JS & CSS Bundling with Rollup - no webpack/webpacker
 
@@ -38,7 +38,6 @@ After first set email & db credentials in .env file (for PostgreSQL, cp .env.exa
 6. Is set up to send basic user signup mail with Gmail, alter smtp or other mail credentials (.env, application_mailer, devise.rb & development.rb), then test signup confirmation emails by signing up & confirming user email
 As above be sure to copy .env.example > .env and enter details, or adapt to suit yours.  (2 factor auth Google accs req an App password for the device registered there and being used, not the normal password)
 
-
 7. $ rails dev:cache (check/toggle, must be cached, if not run again)
 
 ## Optional
@@ -72,7 +71,7 @@ $ rails s
 
 $ rails action_text:install (already done here)
 
-$ rails generate administrate:install (if use Administrate)
+$ rails generate administrate:install (if use default Administrate, for Admin example = in console: User.first.update :admin => true) )
 
 # Live reload/watch CSS
 
