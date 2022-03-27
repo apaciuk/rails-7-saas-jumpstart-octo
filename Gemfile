@@ -77,7 +77,7 @@ gem 'devise', git: 'https://github.com/heartcombo/devise', branch: 'main'
 gem 'devise_masquerade', '~> 1.3'
 
 # Auth Roles,(ie Author, Editor, Instructor, Curator etc) [https://www.rubydoc.info/gems/pundit_roles/0.6.0]
-gem 'pundit', '~> 2.1'
+gem 'pundit'
 gem 'pundit_roles'
 
 # Processes
