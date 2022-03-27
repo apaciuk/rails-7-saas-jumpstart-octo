@@ -4,8 +4,13 @@ module Users
   class OmniauthCallbacksController < Devise::OmniauthCallbacksController # rubocop:todo Style/Documentation
     before_action :set_service
     before_action :set_user
-
     attr_reader :service, :user
+    
+    def show
+    @user = User.find(params[:id])
+    permitted = authorize! @user
+    # [...]
+    end
 
     def facebook
       handle_auth 'Facebook'
