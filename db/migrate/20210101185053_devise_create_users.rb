@@ -37,7 +37,7 @@ class DeviseCreateUsers < ActiveRecord::Migration[7.0] # rubocop:todo Style/Docu
       t.string :last_name
       t.datetime :announcements_last_read_at
       t.boolean :admin, default: false
-      t.integer :user_role_id, unique: true,  null: true, default: null
+      t.integer :user_role_id, unique: true,  null: true
       t.timestamps null: false
     end
     # add_index :users, :username, unique: true
