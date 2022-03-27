@@ -5,12 +5,13 @@ module Users
     before_action :set_service
     before_action :set_user
     attr_reader :service, :user
-
-    def show
-    @user = User.find(params[:id])
-    permitted = auth! @user
+    
+    # def show
+    # @user = User.find(params[:id])
+    # permitted = auth! @user
     # [...]
-    end
+    # end
+
 
     def facebook
       handle_auth 'Facebook'
