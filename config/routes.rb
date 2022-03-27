@@ -3,6 +3,14 @@
 require 'sidekiq/web'
 
 Rails.application.routes.draw do
+  namespace :admin do
+    resources :users
+    resources :services
+    resources :notifications
+    resources :announcements
+
+    root to: 'users#index'
+  end
   resources :notifications, only: [:index]
   resources :announcements, only: [:index]
   devise_for :users, controllers: { omniauth_callbacks: 'users/omniauth_callbacks' }

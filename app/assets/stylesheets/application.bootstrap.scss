@@ -1,10 +1,12 @@
 @import 'bootstrap/scss/bootstrap';
 @import 'actiontext';
 
+
 *{
   margin: 0;
   padding: 0; 
 }
+
 // Masquerade alert shouldn't have a bottom margin
 body > .alert {
   margin-bottom: 0;

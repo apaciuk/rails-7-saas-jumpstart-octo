@@ -3,13 +3,15 @@
 class User < ApplicationRecord
   devise :masqueradable, :database_authenticatable, :confirmable, :registerable, :trackable, :recoverable,
          :rememberable, :validatable, :omniauthable
-  # Validations
+  # Validations, Names, Avatars
   validates :email, presence: true
   validates :email, uniqueness: true
   # validates :username, presence: true
   has_one_attached :avatar
   has_person_name
-  has_many :user_roles, as: :roles
+  # Roles
+ 
+  # Notifications & Services
   has_many :notifications, as: :recipient
   has_many :services
 end

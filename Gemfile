@@ -1,6 +1,6 @@
 # frozen_string_literal: true
 
-source 'https://rubygems.org'
+source 'https://rubygems.org'  
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
 ruby '3.0.3'
@@ -50,6 +50,9 @@ gem 'font-awesome-rails'
 
 # IDs
 gem 'friendly_id', '~> 5.4'
+
+# Roles, (ie Author, Editor, Instructor, Curator etc) [https://www.rubydoc.info/gems/simple_roles/0.0.12]
+
 
 # Service Objects
 gem 'light-services', '~> 0.6.3'
