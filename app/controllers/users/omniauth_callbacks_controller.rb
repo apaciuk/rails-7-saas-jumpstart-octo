@@ -12,7 +12,6 @@ module Users
     # [...]
     # end
 
-
     def facebook
       handle_auth 'Facebook'
     end
