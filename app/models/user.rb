@@ -9,7 +9,7 @@ class User < ApplicationRecord
   # validates :username, presence: true
   has_one_attached :avatar
   has_person_name
-  belongs_to :user_role
+  has_many :user_roles, as: :roles
   has_many :notifications, as: :recipient
   has_many :services
 end
