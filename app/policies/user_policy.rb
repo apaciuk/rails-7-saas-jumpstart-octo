@@ -1,4 +1,4 @@
-=begin
+=begin examples
 class UserPolicy < ApplicationPolicy
   role :regular_user,
        attributes: {
