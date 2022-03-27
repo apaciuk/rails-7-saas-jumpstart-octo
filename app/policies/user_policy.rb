@@ -1,3 +1,4 @@
+=begin
 class UserPolicy < ApplicationPolicy
   role :regular_user,
        attributes: {
@@ -38,3 +39,4 @@ class UserPolicy < ApplicationPolicy
     allow :guest, :admin
   end
 end
+=end
