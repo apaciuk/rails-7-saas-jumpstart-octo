@@ -5,10 +5,10 @@ module Users
     before_action :set_service
     before_action :set_user
     attr_reader :service, :user
-    
+
     def show
     @user = User.find(params[:id])
-    permitted = authorize! @user
+    permitted = auth! @user
     # [...]
     end
 
