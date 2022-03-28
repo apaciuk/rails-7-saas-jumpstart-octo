@@ -73,7 +73,7 @@ gem 'omniauth-github', '~> 2.0'
 gem 'omniauth-twitter', '~> 1.4'
 
 # (Logins, Tokens, Auth Roles,(ie Author, Editor, Instructor, Curator etc, for Admin = in console: User.first.update :admin => true) 
-# [https://www.rubydoc.info/gems/pundit_roles/0.6.0] [https://github.com/heartcombo/devise/wiki/How-To:-Add-a-default-role-to-a-User]
+# [https://www.rubydoc.info/gems/pundit_roles/0.6.0] [https://github.com/RolifyCommunity/rolify]
 gem 'devise', git: 'https://github.com/heartcombo/devise', branch: 'main'
 gem 'devise_masquerade', '~> 1.3'
 gem 'pundit'
