@@ -18,4 +18,5 @@ class User < ApplicationRecord
   # Notifications & Services
   has_many :notifications, as: :recipient
   has_many :services
+  # has_many :members
 end
