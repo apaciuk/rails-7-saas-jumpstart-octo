@@ -24,8 +24,8 @@ gem 'puma', '~> 5.0'
 # View Components/Partials
 gem 'view_component'
 
-# Multi Tenant no data leak (if enable extra config needed see Readme)
-# gem 'multi-tenant-support'
+# Multi Tenant Row-level multitenancy (ease of filtering records) [https://github.com/ErwinM/acts_as_tenant]
+# gem 'acts_as_tenant'
 
 # Http & cookies
 gem 'mechanize'
