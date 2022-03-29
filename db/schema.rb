@@ -113,6 +113,7 @@ ActiveRecord::Schema[7.0].define(version: 2021_12_21_011534) do
     t.datetime "confirmed_at"
     t.datetime "confirmation_sent_at"
     t.string "unconfirmed_email"
+    t.integer "role", default: 0, null: false
     t.string "first_name"
     t.string "last_name"
     t.datetime "announcements_last_read_at"
