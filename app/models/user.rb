@@ -3,6 +3,7 @@
 class User < ApplicationRecord
   devise :masqueradable, :database_authenticatable, :confirmable, :registerable, :trackable, :recoverable,
          :rememberable, :validatable, :omniauthable 
+  # Roles
   enum role: %i[user member] # add other roles as req
   after_initialize :set_default_role, if: :new_record?
   def set_default_role 
@@ -14,8 +15,6 @@ class User < ApplicationRecord
   # validates :username, presence: true
   has_one_attached :avatar
   has_person_name
-  # Roles
-
   # Notifications & Services
   has_many :notifications, as: :recipient
   has_many :services
