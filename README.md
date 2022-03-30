@@ -1,8 +1,8 @@
 # rails 7 sass jumpstart octo
 
-Epic Ruby On Rails 7 SaaS Jumpstart Dark Themed template with PostgreSQL, Redis Caching, Bootstrap 5, Font Awesome 5, Devise, Notifications, Announcements, Rollup, Importmap, CSS Bundling, JS Bundling, Administrate, Hotwire, Stimulus and Action Cable/Cable Ready & Request JS. (Strada coming soon) 
+Epic Ruby On Rails 7 SaaS Jumpstart Dark Themed template with PostgreSQL, Redis Caching, Bootstrap 5, Font Awesome 5, Devise & Roles, Notifications, Announcements, Rollup, Importmap, CSS Bundling, JS Bundling, Administrate, Hotwire, Stimulus and Action Cable/Cable Ready & Request JS. (Strada coming soon) 
 
-## Roles ##
+## Roles - Devise User Model ##
 
 * Admin as boolean flag on User model (manual - switch it in console)
 * Member and other roles as enum integer on User model (write methods as required)
@@ -96,13 +96,5 @@ https://www.patreon.com/xhostcom
 
 ### Multi Tenancy Support ###
 
-(When create new files or migrations run Rubocop to correct and add frozen_string_literal offenses)
-
-AThere are two steps in adding multi-tenancy to your app with acts_as_tenant:
-
-* Setting the current tenant
-
-* Scoping your models.
-
-# Refer to docs at [https://github.com/ErwinM/acts_as_tenant]
+## Todo
 
