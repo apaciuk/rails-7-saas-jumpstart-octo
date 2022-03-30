@@ -4,7 +4,7 @@ class User < ApplicationRecord
   devise :masqueradable, :database_authenticatable, :confirmable, :registerable, :trackable, :recoverable,
          :rememberable, :validatable, :omniauthable 
   # Roles
-  enum role:{ user: 0, member: 1 }
+  enum role:{ user: 0, member: 1 } # add other roles as req
   # enum role: %i[user member] # add other roles as req
   after_initialize :set_default_role, if: :new_record?
   def set_default_role 
