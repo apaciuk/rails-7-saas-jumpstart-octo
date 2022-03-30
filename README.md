@@ -36,7 +36,7 @@ After first set email & db credentials in .env file (for PostgreSQL, cp .env.exa
 
 * Hotwire
 
-4. $ rails hotwire:install
+4. $ rails hotwire:install  (dont overwrite, request js module declared in root .ts file )
 
 5. $ bin/rails db:migrate:reset
 
