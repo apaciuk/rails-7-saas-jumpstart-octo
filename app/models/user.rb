@@ -5,8 +5,8 @@ class User < ApplicationRecord
          :rememberable, :validatable, :omniauthable 
   # Roles, add other roles as required
   enum role:{
-      user: 0, 
-      member: 1 
+       user: 0, 
+       member: 1 
   }, _prefix: true 
 
   after_initialize :set_default_role, if: :new_record?
