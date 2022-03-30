@@ -17,7 +17,7 @@ Epic Ruby On Rails 7 SaaS Jumpstart Dark Themed template with PostgreSQL, Redis 
 
 * https://hotwired.dev/
 
-Style kept minimal so Bootstrap 5 can be swapped out for other CSS or UI if required, Bootstrap icons via CDN, docs reference at ./vendor/index.html, dummy fonts in root of app (not used)
+Style kept minimal so Bootstrap 5 can be swapped out for other CSS or UI if required, Bootstrap icons via CDN (swap/remove), docs reference at ./vendor/index.html, dummy fonts in root of app (not used)
 
 * Ruby/Rails/Node/Postgres
 
