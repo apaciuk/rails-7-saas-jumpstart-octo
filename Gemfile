@@ -18,6 +18,9 @@ gem 'pg', '~> 1.2'
 # Audit the Bundle  [https://www.rubydoc.info/gems/bundle-audit/0.1.0]  bundle audit --update bundle audit
 gem 'bundle-audit'
 
+# Annotations in schema and routes
+gem 'annotate'
+
 # Use the Puma web server [https://github.com/puma/puma]
 gem 'puma', '~> 5.0'
 
