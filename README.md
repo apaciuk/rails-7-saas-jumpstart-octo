@@ -47,7 +47,7 @@ As above be sure to copy .env.example > .env and enter details, or adapt to suit
 
 ## Optional
 
-8. $ rails stimulus_reflex:install (extra config needed see link above)
+8. $ rails stimulus_reflex:install (extra config needed see link [https://docs.stimulusreflex.com/])
 
 # Optional
 
