@@ -2,16 +2,16 @@
 
 class User < ApplicationRecord
   devise :masqueradable, :database_authenticatable, :confirmable, :registerable, :trackable, :recoverable,
-         :rememberable, :validatable, :omniauthable 
+         :rememberable, :validatable, :omniauthable
   # Roles, add other roles as required
-  enum role:{
-       user: 0, 
-       member: 1 
-  }, _prefix: true 
+  enum role: {
+    user: 0,
+    member: 1
+  }, _prefix: true
 
   after_initialize :set_default_role, if: :new_record?
-  def set_default_role 
-     self.role ||= :user
+  def set_default_role
+    self.role ||= :user
   end
   # Validations, Names, Avatars
   validates :email, presence: true

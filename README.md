@@ -5,7 +5,7 @@ Epic Ruby On Rails 7 SaaS Jumpstart Dark Themed template with PostgreSQL, Redis 
 ## Roles - Devise User Model ##
 
 * Admin as boolean flag on User model (manual - switch it in console)
-* Member and other roles as enum integer (hash) on User model (write methods as required)
+* Member and other roles as enum integer (hash) on User model (write methods as required, default sign up set as user) No 3rd party gems needed for Roles.
 
 # JS & CSS Bundling with Rollup - no webpack/webpacker
 
@@ -17,11 +17,11 @@ Epic Ruby On Rails 7 SaaS Jumpstart Dark Themed template with PostgreSQL, Redis 
 
 * https://hotwired.dev/
 
-Style kept minimal so Bootstrap 5 can be swapped out for other CSS or UI if required, Bootstrap icons via CDN (swap/remove), docs reference at ./vendor/index.html, dummy fonts in root of app (not used)
+Style kept minimal so Bootstrap 5 can be swapped out for other CSS or UI if required, Bootstrap icons via CDN (swap/remove), dummy fonts in root of app (not used)
 
 * Ruby/Rails/Node/Postgres
 
-- [Ruby](https://www.ruby-lang.org/en/) 3.0.0
+- [Ruby](https://www.ruby-lang.org/en/) 3.0.0 up
 - [Rails](https://rubyonrails.org/) 7.0.0 up
 - [NodeJS] (https://nodejs.org/es/blog/release/v16.0.0/) 16.0.0
 - [PostgreSQL](https://www.postgresql.org/docs/14/index.html) 14.00
@@ -51,14 +51,13 @@ As above be sure to copy .env.example > .env and enter details, or adapt to suit
 
 # Optional
 
-9. $ rails generate favicon  (put your favicon.png in assets/images, along with favicon.json in config folder)
-    (see https://realfavicongenerator.net/)  for more info.
-    
+9. $ rails generate favicon (put your favicon.png in assets/images, along with favicon.json in config folder) [see https://realfavicongenerator.net]
+   
 10. $ rails g rspec:install  (for testing)
 
 (for test db run $ rails db:test:prepare)
 
-11. Run Importmap
+11. Run Importmap to set/pin Javascript  [https://github.com/rails/importmap-rails]
 
 # Importmap Examples 
 
@@ -66,7 +65,7 @@ As above be sure to copy .env.example > .env and enter details, or adapt to suit
  ./bin/importmap pin bootstrap  (pin bootstrap & popper, ie import & set)
  ./bin/importmap json (show maps)
 
-## Start server! ##
+## Mandatory - Start server! ##
 
 $ rails s
 
