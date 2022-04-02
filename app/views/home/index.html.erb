@@ -1,11 +1,12 @@
 <div class="center jumbotron mt-5 mb-4">
   <div class="container">
-   <!-- testing user roles, remove block -->
+      <!-- testing user roles, remove block -->
   <% if current_user  %>
     <p>Hello <%= current_user.first_name %></p>
     <p> You have successfully activated your account in/as a registered <%= current_user.role %> role</p>
     <p>Awesome!</p>
     <% end %>
+    <!-- end testing user roles, remove block -->
     <div class="center">
      <h1 class="display-6">
           <span class="display-6--intro">Ruby on Rails 7 App Starter Kit!</span></h1>
