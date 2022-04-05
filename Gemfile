@@ -24,13 +24,10 @@ gem 'annotate'
 # Use the Puma web server [https://github.com/puma/puma]
 gem 'puma', '~> 5.0'
 
-# View Components/Partials
+# View Components/Partials  [https://viewcomponent.org/]
 gem 'view_component'
 
-# Multi Tenant Row-level multitenancy (ease of filtering records) [https://github.com/ErwinM/acts_as_tenant]
-# gem 'acts_as_tenant'
-
-# Http & cookies
+# Http & cookies [https://rubygems.org/gems/mechanize]
 gem 'mechanize'
 
 # Use JavaScript with ESM import maps, & bundling CSS [https://github.com/rails/importmap-rails]
@@ -54,7 +51,7 @@ gem 'font-awesome-rails'
 # IDs
 gem 'friendly_id', '~> 5.4'
 
-# Service Objects
+# Service Objects  [https://www.rubydoc.info/gems/light-services/0.6.3] [https://www.rubydoc.info/gems/rails-patterns/0.11.0]
 gem 'light-services', '~> 0.6.3'
 gem 'rails-patterns'
 
