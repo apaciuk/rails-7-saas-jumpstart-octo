@@ -36,8 +36,9 @@ gem 'importmap-rails'
 gem 'jsbundling-rails', '~> 1.0'
 gem 'requestjs-rails' # Always after importmap
 
-# Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
+# Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev] and Pagy for pagination [https://github.com/ddnexus/pagy]
 gem 'turbo-rails'
+gem 'pagy'
 
 # Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
 gem 'cable_ready'

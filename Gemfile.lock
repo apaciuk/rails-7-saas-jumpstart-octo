@@ -344,6 +344,8 @@ GEM
       omniauth-oauth (~> 1.1)
       rack
     orm_adapter (0.5.0)
+    pagy (5.10.1)
+      activesupport
     parallel (1.22.1)
     parser (3.1.1.0)
       ast (~> 2.4.1)
@@ -535,6 +537,7 @@ DEPENDENCIES
   omniauth-facebook (~> 8.0)
   omniauth-github (~> 2.0)
   omniauth-twitter (~> 1.4)
+  pagy
   pg (~> 1.2)
   puma (~> 5.0)
   pundit
