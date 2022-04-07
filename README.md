@@ -40,12 +40,12 @@ After first set email & db credentials in .env file (for PostgreSQL, cp .env.exa
 
 4. $ rails hotwire:install  (dont overwrite, request js module declared in root .ts file )
 
-5. $ bin/rails db:migrate:reset
+5. $ rails dev:cache (check/toggle, must be cached, if not run again) 
 
 6. Is set up to send basic user signup mail with Gmail, alter smtp or other mail credentials (.env, application_mailer, devise.rb & development.rb), then test signup confirmation emails by signing up & confirming user email
 As above be sure to copy .env.example > .env and enter details, or adapt to suit yours.  (2 factor auth Google accs req an App password for the device registered there and being used, not the normal password)
 
-7. $ rails dev:cache (check/toggle, must be cached, if not run again)
+7. $ bin/rails db:migrate:reset  (rails db:migrate:status)
 
 ## Optional
 
