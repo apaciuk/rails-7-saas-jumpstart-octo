@@ -8,6 +8,7 @@ Epic Ruby On Rails 7 SaaS Jumpstart Dark Themed template with PostgreSQL, Redis 
 
 * Admin as boolean flag on User model (manual - switch it in console)
 * Member and other roles as enum integer (hash) on User model (write methods as required, default sign up set as user) No 3rd party gems needed for Roles.
+* Example: User.all.update :role => :owner
 
 # JS & CSS Bundling with Rollup - no webpack/webpacker
 
