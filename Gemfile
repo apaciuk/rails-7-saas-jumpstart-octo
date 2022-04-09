@@ -11,9 +11,8 @@ gem 'rails', github: 'rails/rails', branch: '7-0-stable'
 # The original asset pipeline for Rails [https://github.com/rails/sprockets-rails]
 gem 'sprockets-rails'
 
-# Use postgresql as the database for Active Record, & optional yeet_dba for DB constraint errors, [https://github.com/kevincolemaninc/yeet_dba]
+# Use postgresql as the database for Active Record
 gem 'pg', '~> 1.2'
-# gem 'yeet_dba'
 
 # Audit the Bundle  [https://www.rubydoc.info/gems/bundle-audit/0.1.0]  bundle audit --update bundle audit
 gem 'bundle-audit'
@@ -23,6 +22,9 @@ gem 'annotate'
 
 # Use the Puma web server [https://github.com/puma/puma]
 gem 'puma', '~> 5.0'
+
+# Splitclient [https://help.split.io/hc/en-us] Optional
+# gem 'splitclient-rb'
 
 # View Components/Partials  [https://viewcomponent.org/]
 gem 'view_component'
@@ -36,9 +38,11 @@ gem 'importmap-rails'
 gem 'jsbundling-rails', '~> 1.0'
 gem 'requestjs-rails' # Always after importmap
 
-# Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev] and Pagy for pagination [https://github.com/ddnexus/pagy]
+# Hotwire's SPA-like page accelerator [https://turbo.hotwired.dev]
 gem 'turbo-rails'
-gem 'pagy'
+
+# Pagy Pagination [https://ddnexus.github.io/pagy/#gsc.tab=0]
+# gem 'pagy' 
 
 # Hotwire's modest JavaScript framework [https://stimulus.hotwired.dev]
 gem 'cable_ready'

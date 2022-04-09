@@ -28,7 +28,7 @@ GIT
 
 GIT
   remote: https://github.com/rails/rails.git
-  revision: 3d88287fb1b3d6d1cf2b36fce902c5c8be7e9d2a
+  revision: cf78ba0779cb8900b880051a4f1c103639f23578
   branch: 7-0-stable
   specs:
     actioncable (7.0.2.3)
@@ -290,7 +290,7 @@ GEM
     minitest (5.15.0)
     momentjs-rails (2.29.1.1)
       railties (>= 3.1)
-    msgpack (1.5.0)
+    msgpack (1.5.1)
     multi_json (1.15.0)
     multi_xml (0.6.0)
     name_of_person (1.1.1)
@@ -344,8 +344,6 @@ GEM
       omniauth-oauth (~> 1.1)
       rack
     orm_adapter (0.5.0)
-    pagy (5.10.1)
-      activesupport
     parallel (1.22.1)
     parser (3.1.1.0)
       ast (~> 2.4.1)
@@ -379,7 +377,7 @@ GEM
     rainbow (3.1.1)
     rake (13.0.6)
     redis (4.6.0)
-    regexp_parser (2.2.1)
+    regexp_parser (2.3.0)
     reline (0.3.1)
       io-console (~> 0.5)
     requestjs-rails (0.0.9)
@@ -405,7 +403,7 @@ GEM
       rspec-mocks (~> 3.10)
       rspec-support (~> 3.10)
     rspec-support (3.11.0)
-    rubocop (1.26.1)
+    rubocop (1.27.0)
       parallel (~> 1.10)
       parser (>= 3.1.0.0)
       rainbow (>= 2.2.2, < 4.0)
@@ -537,7 +535,6 @@ DEPENDENCIES
   omniauth-facebook (~> 8.0)
   omniauth-github (~> 2.0)
   omniauth-twitter (~> 1.4)
-  pagy
   pg (~> 1.2)
   puma (~> 5.0)
   pundit
