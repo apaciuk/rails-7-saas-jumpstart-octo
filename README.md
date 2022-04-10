@@ -92,9 +92,13 @@ https://www.patreon.com/xhostcom
 
 ### Contributing ###
 
-1.Fork it (https://github.com/[my-github-username]/rails-7-saas-jumpstart-octo/fork )
+Use Gitflow/Hubflow
+
+[https://datasift.github.io/gitflow/GitFlowForGitHub.html]
+
+1.Clone it (https://github.com/[my-github-username]/rails-7-saas-jumpstart-octo/fork )
 2.Create your feature branch (git checkout -b my-new-feature)
-3.Commit your changes (git commit -am 'Add some feature')
-4.Push to the branch (git push origin my-new-feature)
+3.Commit your changes (git commit -am 'Add awesome feature')
+4.Push to the branch (git push origin my-awesome-feature)
 5.Create a new Pull Request
 
