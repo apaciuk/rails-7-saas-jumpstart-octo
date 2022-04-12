@@ -79,5 +79,6 @@ test:
 #
 production:
   <<: *default
-  database: <%= ENV['DB_NAME'] %>_production
-#   url: <%= ENV['DB_URL'] %>
+  database: <%= ENV['DATABASE_NAME'] %>_production
+# production:
+   # url: <%= ENV["DATABASE_URL"] %>
