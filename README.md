@@ -2,7 +2,7 @@
 
 [https://github.com/xhostcom/rails-7-saas-jumpstart-octo.git]
 
-Epic Ruby On Rails 7 SaaS Jumpstart Dark Themed template with PostgreSQL, Redis Caching, Bootstrap 5, Font Awesome 5, Devise & Roles, Notifications, Announcements, Rollup, Importmap, CSS Bundling, JS Bundling, Administrate, Hotwire, Stimulus and Action Cable/Cable Ready & Request JS. (Strada coming soon) 
+Ruby On Rails 7 SaaS Jumpstart Dark Themed template with PostgreSQL, Redis Caching, Bootstrap 5, Font Awesome 5, Devise & Roles, Notifications, Announcements, Rollup, Importmap, CSS Bundling, JS Bundling, Administrate, Hotwire, Stimulus and Action Cable/Cable Ready & Request JS. (Strada coming soon) 
 
 ## Roles - Devise User Model ##
 
