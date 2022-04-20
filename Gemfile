@@ -12,7 +12,7 @@ gem 'rails', github: 'rails/rails', branch: '7-0-stable'
 gem 'sprockets-rails'
 
 # Use postgresql as the database for Active Record
-gem 'pg', '~> 1.2'
+gem 'pg', '~> 1.3'
 
 # Audit the Bundle  [https://www.rubydoc.info/gems/bundle-audit/0.1.0]  bundle audit --update bundle audit
 gem 'bundle-audit'
@@ -57,8 +57,8 @@ gem 'font-awesome-rails'
 gem 'friendly_id', '~> 5.4'
 
 # Service Objects  [https://www.rubydoc.info/gems/light-services/0.6.3] [https://www.rubydoc.info/gems/rails-patterns/0.11.0]
-gem 'light-services', '~> 0.6.3'
-gem 'rails-patterns'
+# gem 'light-services', '~> 0.6.3'
+# gem 'rails-patterns'
 
 # Use Active Storage variants [https://guides.rubyonrails.org/active_storage_overview.html#transforming-images]
 gem 'image_processing', '~> 1.2'
