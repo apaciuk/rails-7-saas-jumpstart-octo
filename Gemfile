@@ -20,8 +20,8 @@ gem 'bundle-audit'
 # Annotations in schema and routes [https://github.com/ctran/annotate_models]
 gem 'annotate'
 
-# Use the Puma web server [https://github.com/puma/puma]
-gem 'puma', '~> 5.0'
+# Use the Thin web server [https://github.com/macournoyer/thin]
+gem 'thin'
 
 # Splitclient [https://help.split.io/hc/en-us] Optional
 # gem 'splitclient-rb'

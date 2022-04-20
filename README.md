@@ -70,7 +70,7 @@ As above be sure to copy .env.example > .env and enter details, or adapt to suit
 
 ## Mandatory - Start server! ##
 
-$ rails s
+$ bin/dev   (thin start just server)
 
 (For other cmds see  related docs/links)
 
