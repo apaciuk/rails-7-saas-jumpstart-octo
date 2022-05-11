@@ -23,6 +23,9 @@ gem 'annotate'
 # Use the Thin web server [https://github.com/macournoyer/thin]
 gem 'thin'
 
+# AMS [https://github.com/rails-api/active_model_serializers]
+# gem 'active_model_serializers'
+
 # Splitclient [https://help.split.io/hc/en-us] Optional
 # gem 'splitclient-rb'
 
