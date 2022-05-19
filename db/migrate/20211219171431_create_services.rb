@@ -3,7 +3,7 @@
 class CreateServices < ActiveRecord::Migration[7.0] # rubocop:todo Style/Documentation
   def change # rubocop:todo Metrics/MethodLength
     create_table :services do |t|
-      t.references :user, null: false, foreign_key: true
+      t.references :user, null: false, foreign_key: true, index: true
       t.string :provider
       t.string :uid
       t.string :access_token
