@@ -1,2 +1,2 @@
-web: thin start
+web: rails s
 worker: bundle exec sidekiq

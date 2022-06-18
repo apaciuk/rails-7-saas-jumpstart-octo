@@ -4,7 +4,7 @@
 
 Ruby On Rails 7 SaaS Jumpstart Dark Themed template with PostgreSQL, Redis Caching, Bootstrap 5, Font Awesome 5, Devise & Roles, Notifications, Announcements, Rollup, Importmap, CSS Bundling, JS Bundling, Administrate, Hotwire, Stimulus and Action Cable/Cable Ready & Request JS. (Strada coming soon) 
 
-(For less opinionated slightly more bare bones version for quick MVP's, tests and projects, with UUIDs, User Roles, Rack Contrib, RSpec/Rubocop & Thin webserver,
+(For less opinionated slightly more bare bones version for quick MVP's, tests and projects, with UUIDs, User Roles, Rack Contrib, RSpec/Rubocop & Puma webserver,
 [https://github.com/xhostcomweb/rails-7-rack-attack.git])
 
 ## Roles - Devise User Model ##
