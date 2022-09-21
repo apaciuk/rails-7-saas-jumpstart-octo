@@ -3,7 +3,7 @@
 source 'https://rubygems.org'
 git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 
-ruby '3.1.0'
+ruby '3.1.2'
 
 # Use specific branch of Rails
 gem 'rails', github: 'rails/rails', branch: '7-0-stable'
@@ -13,9 +13,6 @@ gem 'sprockets-rails'
 
 # Use postgresql as the database for Active Record
 gem 'pg', '~> 1.3'
-
-# Audit the Bundle  [https://www.rubydoc.info/gems/bundle-audit/0.1.0]  bundle audit --update bundle audit
-gem 'bundle-audit'
 
 # Annotations in schema and routes [https://github.com/ctran/annotate_models]
 gem 'annotate'
@@ -119,6 +116,7 @@ gem 'bootsnap', require: false
 # Use Sass to process CSS
 gem 'sassc-rails'
 
+gem 'lefthook', require: false
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   # gem 'byebug', '~> 9.0'
@@ -130,6 +128,9 @@ group :development, :test do
   gem 'rubocop-performance', '~> 1.11.0', require: false
   gem 'rubocop-rails', '~> 2.11.0', require: false
   gem 'rubocop-rspec', '~> 2.6', require: false
+  gem 'brakeman', require: false
+  # Audit the Bundle  [https://www.rubydoc.info/gems/bundle-audit/0.1.0]  bundle audit --update bundle audit
+  gem 'bundler-audit'
 end
 
 group :development do
