@@ -116,7 +116,8 @@ gem 'bootsnap', require: false
 # Use Sass to process CSS
 gem 'sassc-rails'
 
-gem 'lefthook', require: false
+gem 'lefthook', require: false # (Should work with git hooks out of box but if not run "$ git add . &&  git commit -am 'Initial import' && lefthook install")
+              # + copy ex-lefthook.yml as lefthook.yml
 group :development, :test do
   # See https://guides.rubyonrails.org/debugging_rails_applications.html#debugging-with-the-debug-gem
   # gem 'byebug', '~> 9.0'
